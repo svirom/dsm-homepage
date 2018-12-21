@@ -83,9 +83,16 @@ body {
     margin: 0 0.2em;
     font-size: 16px;
     font-weight: 600;
+    color: #ffffff;
 }
 .right_buttons .btn:last-child {
 	margin-right: 0;
+}
+.main_container .btn_login {
+	background-color: #333333;
+} 
+.main_container .btn_signup {
+	background-color: #0089D9;
 }
 .main_nav button {
 	margin-top: 13px;
@@ -94,9 +101,32 @@ body {
 .main_nav button .icon-bar {
     background-color: #ddd;
 }
-@media (max-width: 912px) {
-	.right_buttons .btn { display: block; margin-bottom: 10px; }
+@media (max-width: 1600px) {
+	.home_nav.nav > li > a {
+		padding: 10px;
+	}
 }
+@media (max-width: 1199px) {
+	.main_nav .navbar-brand {
+		padding-top: 15px;
+	}
+	.navbar-brand img {
+		max-width: 150px;
+	}
+	.home_nav.nav > li > a {
+		font-size: 16px;
+	}
+	.right_buttons {
+		padding-top: 13px;
+	}
+	.right_buttons .btn {
+		width: auto;
+		font-size: 14px;
+	}
+}
+/*@media (max-width: 912px) {
+	.right_buttons .btn { display: block; margin-bottom: 10px; }
+}*/
 @media (max-width: 767px) {
 	.main_nav .navbar-brand { padding: 12px 20px; }
 	#responsive-menu { background: rgba(0, 0, 0, 0.7); }
