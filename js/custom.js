@@ -74,7 +74,7 @@ $(document).ready(function() {
     });
 
 //background of top menu
-    $(function () {
+    /*$(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 400) {
                 $('.main_nav').addClass("bkgr");
@@ -83,7 +83,7 @@ $(document).ready(function() {
                 $('.main_nav').removeClass("bkgr");
             }
         });     
-    });
+    });*/
 
 //Plans slider
 	var plansNames = [
