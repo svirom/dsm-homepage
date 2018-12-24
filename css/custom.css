@@ -287,8 +287,14 @@ body {
 .header_form > p {
 	margin-bottom: 5px;
 	padding: 0 30px;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: 500;
+}
+.header_form > p span {
+	font-size: 28px;
+	font-weight: 600;
+    color: #0089D9;
+    text-transform: uppercase;
 }
 .header_buttons {
 	padding: 20px 30px;
@@ -331,6 +337,9 @@ body {
 		font-size: 20px;
 	}
 	.header_form > p {
+		font-size: 22px;
+	}
+	.header_form > p span {
 		font-size: 24px;
 	}
 }
@@ -365,6 +374,9 @@ body {
 	}
 	.header_form > p {
 		font-size: 20px;
+	}
+	.header_form > p span {
+		font-size: 22px;
 	}
 	.header_buttons {
 		padding: 20px;
