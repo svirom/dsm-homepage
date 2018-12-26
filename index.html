@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DSM Homepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500,600,700,800|Raleway:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500,600,700,800|Raleway:400,600,700|Source+Sans+Pro:400,900" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--<link href="css/font-awesome.min.css" rel="stylesheet">-->
     <link href="css/custom.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,7 +37,7 @@
             <div class="collapse navbar-collapse" id="responsive-menu">
                 <ul class="nav home_nav">
                     <li><a href="#home_section">Home</a></li>
-                    <li><a href="#offer_section">Features</a></li>
+                    <li><a href="#features_section">Features</a></li>
 	                <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#">Help</a></li>
 	                <li><a href="https://www.dsmtool.com/blog">Blog</a></li>
@@ -52,7 +53,7 @@
 <!--End Header section -->
 
 <!--Header section -->
-    <div class="main_container home_section" id="home_section">
+    <section class="main_container home_section" id="home_section">
         <div class="row">
             <div class="col-sm-12">
                 <div class="header_sectionWrapper">
@@ -83,21 +84,139 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <!--End Header section -->
 
-<!--What Do We Offer section -->
-    <div class="container-fluid offer_section" id="offer_section">
+<!--Try section -->
+    <section class="main_container try_section">
         <div class="row">
-            
+            <div class="col-sm-12">
+                <div class="container_inner">
+                    <p><span>Try DSM Tool</span> and start selling today!</p>
+                    <a class="btn btn_signup" href="/signin">Join Free</a>
+                </div>
+            </div>
         </div>
-    </div>
-<!--End What Do We Offer section -->
+    </section>
+<!--End Try section -->
+
+<!--Features section -->
+    <section class="main_container features_section" id="features_section">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="features_carousel" class="carousel slide" data-interval="false">
+                  
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-push-6">
+                                    <div class="item_features">
+                                        <p class="features_number">01</p>
+                                        <p class="features_title">Rapid Lister</p>
+                                        <h2>The #1 Lister in the<br> market</h2>
+                                        <p>Save time - List items from a variety of sources within a click of a button.</p>
+                                        <p>Title optimizations suggestions, bulk lister, image editor, and more.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-pull-6">
+                                    <img src="img/features_1.png" alt="Features 01">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-push-6">
+                                    <div class="item_features">
+                                        <p class="features_number">02</p>
+                                        <p class="features_title">Repricer & Store optimization</p>
+                                        <h2>Smart Repricing & Store<br> Optimization</h2>
+                                        <p>Maintain high seller ranking with price and quantity monitoring from multiple sources.</p>
+                                        <p>Smart filters, advanced edit options and alerts will help you optimize your store.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-pull-6">
+                                    <img src="img/features_2.png" alt="Features 02">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-push-6">
+                                    <div class="item_features">
+                                        <p class="features_number">03</p>
+                                        <p class="features_title">Sales statistics</p>
+                                        <h2>Statistics and store<br> performance analysis</h2>
+                                        <p>Make more money - Track your profits and growth, manage your sales and shipment status.</p>
+                                        <p>Increase your feedback count with automatic messages and customer feedback request.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-pull-6">
+                                    <img src="img/features_3.png" alt="Features 03">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-push-6">
+                                    <div class="item_features">
+                                        <p class="features_number">04</p>
+                                        <p class="features_title">Auto order</p>
+                                        <h2>Auto Ordering & Tracking<br> number updates</h2>
+                                        <p>Our Automated Ordering System will free you from the hassle of the daily</p>
+                                        <p>ordering routine, and reduce the risk of loss due to price or stock changes.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-pull-6">
+                                    <img src="img/features_4.png" alt="Features 04">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-push-6">
+                                    <div class="item_features">
+                                        <p class="features_number">05</p>
+                                        <p class="features_title">Customer support system</p>
+                                        <h2>Smart CRM<br> for dropshipping</h2>
+                                        <p>Receive customer messages and eBay updates directly to DSM Messages Center.</p>
+                                        <p>Become a pro with our automatic messages system, and ready-made reply templates.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-sm-pull-6">
+                                    <img src="img/features_5.png" alt="Features 05">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <!--<a class="left carousel-control" href="#features_carousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>-->
+                    <a class="right carousel-control" href="#features_carousel" data-slide="next">
+                        <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                        <!--<i class="fa fa-arrow-right" aria-hidden="true"></i>-->
+                        <i class="fas fa-arrow-right"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--End Features section -->
 
 <!--Our Plans section -->
-    <div class="container-fluid plans_section" id="pricing">
+    <!--<section class="plans_section" id="pricing">
         <div class="row">
-            <!--<div class="col-md-10 col-md-offset-1 col-xs-12 plans-box">
+            <div class="col-md-10 col-md-offset-1 col-xs-12 plans-box">
                 <div class="plans-page-slider">
                     <section id="content">
                         <h4 class="mb">Our reasonable plans</h4>
@@ -127,22 +246,13 @@
                         </div>
                     </section>
                 </div>
-            </div>-->
+            </div>
         </div>       
-    </div>
+    </section>-->
 <!--End Our Plans section -->
 
-<!--Try section -->
-    <div class="container-fluid try_section">
-        <!--<div class="header_buttons">
-            <p>Try DSMTool and start selling today!</p>
-            <a class="btn btn-trial" href="#">FREE TRIAL</a>
-        </div> -->
-    </div>
-<!--End Try section -->
-
 <!--Stores section -->
-    <div class="container-fluid stores_section">
+    <!--<section class="stores_section">
         <div class="row">
             <h4>Supported Stores</h4>
             <div class="container">
@@ -151,13 +261,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>-->
 <!--End Stores section -->
 
 <!--Carousel section -->
-    <div class="container-fluid carousel_section">
+    <!--<section class="carousel_section">
         <div class="row">
-            <h4>Our customers reviews</h4>
+            <h4>Our customers reviews</h4>-->
             <!--<div class="container">
                 <div class="row">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000"> -->
@@ -389,16 +499,16 @@
                     </div>
                     
                 </div>
-            </div>-->
+            </div>
         </div>
-    </div>
+    </section>-->
 <!--End Carousel section -->
 
 
 <!--Footer section -->
-    <div class="container-fluid main_footer">
+    <!--<section class="main_footer">
     	<div class="row">
-            <!--<div class="container">
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 widget">
                         <h5>Drop Shipping Tool</h5>
@@ -440,9 +550,9 @@
                         </ul>
                     </div>
                 </div>
-            </div>-->
+            </div>
     	</div>
-    </div>
+    </section>-->
 <!--End Footer section -->
 
 <!-- Back to Top Button-->

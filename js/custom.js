@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
-
+/*$('.carousel').carousel({
+    interval: false
+}); */
 //changing line rows in header section
-	var change_text = [
+	/*var change_text = [
 		'Listing from Amazon to eBay ',
 		'Auto-Order Chrome Extension ',
 		'CRM system for eBay ',
@@ -32,7 +34,7 @@ $(document).ready(function() {
 			$('.change_text').text(change_text[changeCounter]);
 			changeCounter++;
 		}
-	}
+	}*/
 
 //smooth scroll readmore button and a anchor #
     $('.readmore, .home_nav a[href^="#"], .header_buttons a[href^="#"]').bind('click.smoothscroll', function(e) {
@@ -234,7 +236,7 @@ $(document).ready(function() {
     });
 
 //What Do We Offer
-    var h = $(window).height();
+    /*var h = $(window).height();
    
     $(window).bind("scroll.once", function(){
         if ( ($(window).scrollTop() + h) >= $("#offer_section").offset().top) {
@@ -294,17 +296,8 @@ $(document).ready(function() {
         $("#menu_wrapper a").on("click", function(event){
             event.preventDefault();
         });
-        /*$("#menu_wrapper a").on("click", function(event){
-            event.preventDefault();
-            clearInterval(sliderTimer);
-            $(this).closest("ul").find("li").removeClass("active");
-            $(this).closest("li").addClass("active");
-            var rightId = $(this).attr("href");
-            $(".right_section").find(".right_panel").css("display", "none");
-            $(rightId).fadeIn();
 
-        })*/
         $(window).unbind("scroll.once");
-    }    
+    }  */  
 
 });
