@@ -197,7 +197,8 @@ $(document).ready(function() {
         });
         // prepare slider details
         var value = $( "#slider-range-min" ).slider("value");
-        $(".ui-slider-handle").html("<img src='./img/slider_icon.png'>");
+        //$(".ui-slider-handle").html("<img src='./img/slider_icon.png'>");
+        $(".ui-slider-handle").html("<span class='slider_img'></span>");
         updateDetails(value);
         
         function updateDetails(value) {
@@ -230,7 +231,7 @@ $(document).ready(function() {
                     $('.royal').each(function() { $(this).hide(); });
                 }
             } else {
-                $('.pro').each(function() { $(this).hide(); });
+                //$('.pro').each(function() { $(this).hide(); });
             }
         }
     });
