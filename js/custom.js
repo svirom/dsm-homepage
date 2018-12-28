@@ -224,7 +224,8 @@ $(document).ready(function() {
             
             // show/hide features according to plan
             if (plansItems[value] >= 2000) {
-                $('.pro').each(function() { $(this).show(); });
+                //$('.pro').each(function() { $(this).show(); });
+                $('.pro').each(function() { $(this).addClass('active'); });
                 if (plansItems[value] >= 10000) {
                     $('.royal').each(function() { $(this).show(); });
                 } else {
@@ -232,6 +233,7 @@ $(document).ready(function() {
                 }
             } else {
                 //$('.pro').each(function() { $(this).hide(); });
+                $('.pro').each(function() { $(this).removeClass('active'); });
             }
         }
     });
