@@ -392,7 +392,7 @@ p {
 }
 /*-----------End Header Section--------------------*/
 
-/*-----------Try Section--------------------*/
+/*-----------Try & FBCommunity Sections--------------------*/
 .try_section {
 	padding: 50px 20px;
 	background-color: #1A1A1A;
@@ -420,6 +420,43 @@ p {
     font-weight: 600;
     color: #ffffff;
 }
+.try_section i {
+	margin-left: 10px;
+	font-size: 26px;
+}
+.try_section .list_fbcommunity {
+	display: inline-block;
+	margin-left: 60px;
+	padding: 10px;
+    vertical-align: middle;
+    border-radius: 30px;
+    background-color: #0089D9;
+}
+.try_section .list_fbcommunity li {
+	float: left;
+	margin-right: 10px;
+}
+.try_section .list_fbcommunity li:last-child {
+	margin-right: 0;
+}
+.try_section .list_fbcommunity a {
+	margin-left: 0;
+    padding: 0;
+}
+.try_section .list_fbcommunity img {
+	padding: 4px;
+	border-radius: 50%;
+    background-color: #ffffff;
+}
+@media (max-width: 1199px) {
+	.try_section p.p_fbcommunity {
+		display: block;
+	}
+	.try_section .list_fbcommunity {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
 @media (max-width: 991px) {
 	.try_section p {
 		display: block;
@@ -440,8 +477,22 @@ p {
 		padding: 8px 20px;
 		font-size: 14px;
 	}
+	.try_section i {
+		font-size: 20px;
+	}
+	.try_section .list_fbcommunity {
+		padding: 5px;
+		border-radius: 21px;
+	}
+	.try_section .list_fbcommunity li {
+		margin-right: 5px;
+	}
+	.try_section .list_fbcommunity img {
+		width: 28px;
+		padding: 2px;
+	}
 }
-/*-----------End Try Section--------------------*/
+/*-----------End Try & FBCommunity Sections--------------------*/
 
 /*-----------Features Section--------------------*/
 .features_section {
@@ -929,7 +980,7 @@ p {
 /*-----------Stores Section--------------------*/
 /*-----------End Stores Section--------------------*/
 
-/*-----------Carousel Section--------------------*/
+/*-----------Reviews Section--------------------*/
 .carousel_section {
 	position: relative;
 	padding: 30px 20px 80px;
@@ -1032,66 +1083,78 @@ p {
 @media (max-width: 767px) {
 	.item_content .item_text { font-size: 20px; }
 }
-/*-----------End Carousel Section--------------------*/
+/*-----------End Reviews Section--------------------*/
 
-/*-----------Footer--------------------*/
+/*-----------Footer Section--------------------*/
 .main_footer {
 	padding: 30px 20px;
-	background: #1F2024;
+	background: #1A1A1A;
 }
 .widget {
 	padding: 20px;
 }
 .widget h5 {
-	font-size: 16px;
-	text-decoration: underline;
-}
-.widget a {
+	margin-bottom: 2em;
+	font: 500 20px 'Montserrat', sans-serif;
 	color: #ffffff;
 }
+.widget a {
+	font: 500 16px/2.0 'Montserrat', sans-serif;
+	color: #999999;
+}
+.widget a:hover,
+.widget a:focus,
+.widget a:active {
+	color: #0089D9;
+	text-decoration: none;
+}
+.widget.widget_follow_us li,
 .widget.widget_fb li {
 	display: inline-block;
-	margin-right: 2px;
+	margin-right: 6px;
 }
+.widget.widget_follow_us a,
 .widget.widget_fb a {
-	display: block;
-	height: 16px;
-}
-.widget.widget_fb li img {
-	width: 16px;
-	vertical-align: top;
-}
-.widget.widget_follow_us li {
 	display: inline-block;
-	margin-right: 8px;
-}
-.widget.widget_follow_us a {
-	display: block;
-	height: 23px;
-	padding: 3px;
-	border-radius: 4px;
-	background-color: #ffffff;
+	height: 32px;
+	width: 32px;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #404040;
 }
 .widget.widget_follow_us li i {
-	margin-top: -1px;
-	font-size: 20px;
-	color: #4267B2;
+	font-size: 18px;
+	color: #999999;
+    vertical-align: middle;
 }
-
-.widget.widget_follow_us li:nth-child(2) i {
-	font-size: 20px;
-	color: #FF0000;
+.widget.widget_follow_us li a:hover {
+	background-color: #0089D9;
 }
-.widget.widget_follow_us li:nth-child(3) i {
-	font-size: 20px;
-	color: #ddd;
+.widget.widget_follow_us li a:hover i {
+	color: #ffffff;
 }
-.widget.widget_follow_us li:nth-child(3) a {
-	background-color: transparent;
+.widget.widget_fb a {
+	background-color: #666666;
 }
-
-
-/*-----------End Footer--------------------*/
+.widget.widget_fb li img {
+	padding: 4px;
+	vertical-align: top;
+}
+@media (max-width: 767px) {
+	.widget.widget_fb li {
+		margin-right: 0;
+	}
+	.widget.widget_fb a {
+		height: 28px;
+		width: 28px;
+	}
+	.widget.widget_fb li img {
+		padding: 3px;
+	}
+}
+/*-----------End Footer Section--------------------*/
 
 /*-----------Back to Top Button--------------------*/
 .back_to_top {
