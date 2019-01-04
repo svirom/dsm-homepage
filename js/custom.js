@@ -1,40 +1,5 @@
 $(document).ready(function() {
 
-/*$('.carousel').carousel({
-    interval: false
-}); */
-//changing line rows in header section
-	/*var change_text = [
-		'Listing from Amazon to eBay ',
-		'Auto-Order Chrome Extension ',
-		'CRM system for eBay ',
-		'Sales & Profits Statistics ',
-		'5 Responsive Templates ',
-		'Item Grabber Chrome Extension ',
-		'Store Optimization Alerts ',
-		'Auto Customer Service ',
-		'Auto restocking inventory ',
-		'Management Dashboard ',
-		'Customer message templates ',
-		'Advanced images editor ',
-		'Smart filter & bulk operations ',
-		'Video guides & Help center '
-	]
-	
-	$('.change_text').text(change_text[0]);
-	var changeCounter = 0;
-	var interval_text = setInterval(rotate_text, 3000);
-
-	function rotate_text(){
-		if (changeCounter < change_text.length) {
-			$('.change_text').text(change_text[changeCounter]);
-			changeCounter++;
-		} else {
-			changeCounter = 0;
-			$('.change_text').text(change_text[changeCounter]);
-			changeCounter++;
-		}
-	}*/
 
 //smooth scroll readmore button and a anchor #
     $('.readmore, .home_nav a[href^="#"], .header_buttons a[href^="#"]').bind('click.smoothscroll', function(e) {
@@ -73,6 +38,32 @@ $(document).ready(function() {
         $('html, body').stop().animate({
             'scrollTop': 0}, 600, 'swing', function() {
         });
+    });
+
+//Reviews carousel indicators
+$(document).ready(function() {
+    let reviewsCarousel = $('#reviews_carousel');
+    let itemsCount = reviewsCarousel.find('.review_item');
+    let reviewsIndicators = reviewsCarousel.find('.carousel-indicators');
+
+    itemsArray = Array.from(itemsCount);
+    itemsArray.forEach((item, i) => {
+        if (i === 0) {
+            reviewsIndicators.append(`<li data-target="#reviews_carousel" data-slide-to="${i}" class="active"></li>`);
+        } else {
+            reviewsIndicators.append(`<li data-target="#reviews_carousel" data-slide-to="${i}"></li>`);
+        }
+    })
+})
+
+//Video Button
+    $(document).on("click", "button.video_button", function() {
+        let $video = $(this).closest('.review_video').find('.videoWrapper iframe');
+        let src = $video.attr('src');
+        let buttonWrapper = $(this).closest('.review_video').find('.buttonWrapper');
+    
+        $video.attr('src', src + '&autoplay=1');
+        buttonWrapper.css("display", "none");
     });
 
 //background of top menu
