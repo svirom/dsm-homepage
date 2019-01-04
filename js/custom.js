@@ -23,45 +23,44 @@ $(document).ready(function() {
     });
     
 // scroll to top function
-    $(function () {
-        $(window).scroll(function () {
+    $(function() {
+        $(window).scroll(function() {
             if ($(this).scrollTop() > 400) {
                 $('.back_to_top').fadeIn(600);
-                } 
-            else {
+            } else {
                 $('.back_to_top').fadeOut(600);
-                }
-        });     
+            }
+        });
     });
     $('.back_to_top').bind('click.smoothscroll', function(e) {
         e.preventDefault();
         $('html, body').stop().animate({
-            'scrollTop': 0}, 600, 'swing', function() {
-        });
+            'scrollTop': 0
+        }, 600, 'swing', function() {});
     });
 
 //Reviews carousel indicators
-$(document).ready(function() {
-    let reviewsCarousel = $('#reviews_carousel');
-    let itemsCount = reviewsCarousel.find('.review_item');
-    let reviewsIndicators = reviewsCarousel.find('.carousel-indicators');
+    $(document).ready(function() {
+        var reviewsCarousel = $('#reviews_carousel');
+        var itemsCount = reviewsCarousel.find('.review_item');
+        var reviewsIndicators = reviewsCarousel.find('.carousel-indicators');
 
-    itemsArray = Array.from(itemsCount);
-    itemsArray.forEach((item, i) => {
-        if (i === 0) {
-            reviewsIndicators.append(`<li data-target="#reviews_carousel" data-slide-to="${i}" class="active"></li>`);
-        } else {
-            reviewsIndicators.append(`<li data-target="#reviews_carousel" data-slide-to="${i}"></li>`);
-        }
+        itemsArray = Array.from(itemsCount);
+        itemsArray.forEach(function(item, i) {
+            if (i === 0) {
+                reviewsIndicators.append('<li data-target="#reviews_carousel" data-slide-to="' + i + '" class="active"></li>');
+            } else {
+                reviewsIndicators.append('<li data-target="#reviews_carousel" data-slide-to="' + i + '"></li>');
+            }
+        })
     })
-})
 
 //Video Button
     $(document).on("click", "button.video_button", function() {
-        let $video = $(this).closest('.review_video').find('.videoWrapper iframe');
-        let src = $video.attr('src');
-        let buttonWrapper = $(this).closest('.review_video').find('.buttonWrapper');
-    
+        var $video = $(this).closest('.review_video').find('.videoWrapper iframe');
+        var src = $video.attr('src');
+        var buttonWrapper = $(this).closest('.review_video').find('.buttonWrapper');
+
         $video.attr('src', src + '&autoplay=1');
         buttonWrapper.css("display", "none");
     });
