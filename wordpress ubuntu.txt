@@ -1,0 +1,16 @@
+https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories-on-a-vps
+
+rsync заміть ftp використовуй
+
+тоді зроби chod свого юзера на весь ВП
+і лише www-data на uploads
+
+в мене такий скріпт
+sudo chown www-data:www-data  -R * # Let Apache be owner
+sudo find . -type d -exec chmod 755 {} \;  # Change directory permissions rwxr-xr-x
+sudo find . -type f -exec chmod 644 {} \;  # Change file permissions rw-r--r--
+
+sudo chown $USER:$USER  -R * # Let your useraccount be owner
+chown www-data:www-data wp-content # Let apache be owner of wp-content
+
+але я теми і плагіни не трогаю ніколи, тобі може краще themes лишити під юзером
