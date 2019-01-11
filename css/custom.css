@@ -525,6 +525,7 @@ p {
     border-radius: 50%;
 }
 .integrations_section .list_integrations img {
+	max-width: 80px; /*test*/
 	padding: 8px;
 	border-radius: 50%;
     background-color: #ffffff;
@@ -580,17 +581,21 @@ p {
 }
 .integrations_content {
 	padding: 4px 120px 20px 50px;
+	padding-right: 15%; /*test*/
 }
 .integrations_content h3 {
 	font: 700 64px/1.0 'Montserrat', sans-serif;
+	font-size: 42px; /*test*/
 	color: #E5E5E5;
 }
 .integrations_content p {
 	font: 900 30px 'Montserrat', sans-serif;
+	font-size: 24px; /*test*/
 	color: #262626;
 }
 .integrations_sources {
 	height: 228px;
+	height: 190px; /*test*/
 	margin-top: 20px;
 	border-radius: 8px;
 	background-color: #F2F2F2;
@@ -601,12 +606,14 @@ p {
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
 	font: 700 22px/1.0 'Raleway', sans-serif;
+	font-size: 20px; /*test*/
 	color: #0089D9;
 	background-color: #1A1A1A;
 }
 @media (max-width: 1199px) {
 	.integrations_section {
 		background-image: url(../img/bkgr_earth1200.png);
+		background-position: center bottom;
 	}
 }
 @media (max-width: 991px) {
@@ -619,7 +626,49 @@ p {
 }
 @media (max-width: 767px) {
 	.integrations_section {
+		padding-top: 10px;
 		background-image: url(../img/bkgr_earth768.png);
+	}
+	.integrations_section h2 {
+		margin-top: 10px;
+		font-size: 30px;
+	}
+	.integrations_section .list_integrations {
+		padding: 10px 0;
+	}
+	.integrations_section .list_integrations li {
+		border: 3px solid rgba(38, 38, 38, 0.3);
+		margin-right: 0;
+	}
+	.integrations_section .list_integrations img {
+		max-width: 50px;
+		padding: 2px;
+	}
+	.integrations_section .list_integrations li::after {
+		display: none;
+	}
+	.integrations_section .tab-content {
+		padding-top: 0;
+	}
+	.integrations_content {
+		padding: 4px 0 20px;
+	}
+	.integrations_content h3 {
+		margin-top: 10px;
+		padding-left: 10px;
+		font-size: 36px;
+	}
+	.integrations_content p {
+		margin-bottom: 0;
+		padding-left: 10px;
+		font-size: 20px;
+	}
+	.integrations_sources {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.integrations_sources h4 {
+		font-size: 18px;
 	}
 }
 /*-----------End Integrations Section------------------*/
