@@ -6,11 +6,13 @@ $(document).ready(function() {
         e.preventDefault();
 
         var target = this.hash,
-        $target = $(target);
+            $target = $(target);
         var topDiff = $target.offset().top;
 
-        if ( (this.hash == "#pricing") && ($(document).width() >= 768) ) {
-            topDiff = topDiff - 180;
+        if ((this.hash == "#pricing") && ($(document).width() >= 768)) {
+            topDiff = topDiff - 20;
+        } else if ((this.hash == "#integrations_section") && ($(document).width() >= 768)) {
+            topDiff = topDiff - 20;
         } else {
             topDiff = topDiff - 60;
         }

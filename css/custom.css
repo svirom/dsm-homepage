@@ -581,7 +581,7 @@ p {
 }
 .integrations_content {
 	padding: 4px 120px 20px 50px;
-	padding-right: 15%; /*test*/
+	padding-right: 5%; /*test*/
 }
 .integrations_content h3 {
 	font: 700 64px/1.0 'Montserrat', sans-serif;
@@ -592,6 +592,19 @@ p {
 	font: 900 30px 'Montserrat', sans-serif;
 	font-size: 24px; /*test*/
 	color: #262626;
+}
+.integrations_left {
+	position: relative;
+}
+.integrations_left::after {
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 3px;
+	top: 10px;
+	right: -1px;
+	background-color: #E7E7E7;
 }
 .integrations_sources {
 	height: 228px;
@@ -609,6 +622,50 @@ p {
 	font-size: 20px; /*test*/
 	color: #0089D9;
 	background-color: #1A1A1A;
+}
+.integrations_images {
+	height: 130px;
+	text-align: center;
+}
+.integrations_images .integrations_single {
+	height: 100%;
+}
+.integrations_images .integrations_half,
+.integrations_images .integrations_third {
+	padding-left: 25px;
+    padding-right: 25px;
+}
+.integrations_images .integrations_half {
+	height: 50%;
+}
+.integrations_images .integrations_third {
+	height: 33.33333%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.integrations_half div,
+.integrations_third div {
+	height: 100%;
+}
+.integrations_images img {
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+.integrations_images img,
+.integrations_images p {
+	position: relative;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);  
+	    -ms-transform: translateY(-50%); 
+	     -o-transform: translateY(-50%); 
+	        transform: translateY(-50%);
+}
+.integrations_images p {
+	margin: 0;
+	font: 700 18px/0.9 'Raleway', sans-serif;
+	color: #0089D9;
 }
 @media (max-width: 1199px) {
 	.integrations_section {
