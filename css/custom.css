@@ -608,7 +608,7 @@ p {
 }
 .integrations_sources {
 	height: 228px;
-	height: 190px; /*test*/
+	height: 208px; /*test*/
 	margin-top: 20px;
 	border-radius: 8px;
 	background-color: #F2F2F2;
@@ -624,7 +624,7 @@ p {
 	background-color: #1A1A1A;
 }
 .integrations_images {
-	height: 130px;
+	height: 148px;
 	text-align: center;
 }
 .integrations_images .integrations_single {
