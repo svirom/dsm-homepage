@@ -28,13 +28,15 @@ $(document).ready(function() {
     $(function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 400) {
-                $('.back_to_top').fadeIn(600);
+                // $('#back_to_top').fadeIn(600);
+                $('#back_to_top').css('display', 'block');
             } else {
-                $('.back_to_top').fadeOut(600);
+                // $('#back_to_top').fadeOut(600);
+                $('#back_to_top').css('display', 'none');
             }
         });
     });
-    $('.back_to_top').bind('click.smoothscroll', function(e) {
+    $('#back_to_top').bind('click.smoothscroll', function(e) {
         e.preventDefault();
         $('html, body').stop().animate({
             'scrollTop': 0
