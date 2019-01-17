@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 //smooth scroll readmore button and a anchor #
-    $('.readmore, .home_nav a[href^="#"], .header_buttons a[href^="#"]').bind('click.smoothscroll', function(e) {
+    $('.readmore, .home_nav a[href^="#"]').bind('click.smoothscroll', function(e) {
         e.preventDefault();
 
         var target = this.hash,
@@ -50,14 +50,14 @@ $(document).ready(function() {
         }
     });
 //Swipe features slider slides
-    $(document).ready(function() {
+    // $(document).ready(function() {
         $("#features_carousel").swiperight(function() {
             $(this).carousel('prev');
         });
         $("#features_carousel").swipeleft(function() {
             $(this).carousel('next');
         });
-    });
+    // });
 
 //Reviews carousel indicators
     $(document).ready(function() {
