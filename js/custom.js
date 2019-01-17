@@ -51,13 +51,28 @@ $(document).ready(function() {
     });
 //Swipe features slider slides
     // $(document).ready(function() {
-        $("#features_carousel").swiperight(function() {
+        /*$("#features_carousel").swiperight(function() {
             $(this).carousel('prev');
         });
         $("#features_carousel").swipeleft(function() {
             $(this).carousel('next');
-        });
+        });*/
     // });
+    $("#features_carousel").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event){
+        var xMove = event.originalEvent.touches[0].pageX;
+        if( Math.floor(xClick - xMove) > 10 ){
+            $(this).carousel('next');
+        }
+        else if( Math.floor(xClick - xMove) < -10 ){
+            $(this).carousel('prev');
+        }
+    });
+    $("#features_carousel").on("touchend", function(){
+            $(this).off("touchmove");
+    });
+});
 
 //Reviews carousel indicators
     $(document).ready(function() {
