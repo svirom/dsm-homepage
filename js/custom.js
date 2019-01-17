@@ -43,6 +43,22 @@ $(document).ready(function() {
         }, 600, 'swing', function() {});
     });
 
+//Prevent to click links in features slider on mobile
+    $('a.features_link').on('click', function(e) {
+        if ($(document).width() < 768) {
+            e.preventDefault();
+        }
+    });
+//Swipe features slider slides
+    $(document).ready(function() {
+        $("#features_carousel").swiperight(function() {
+            $(this).carousel('prev');
+        });
+        $("#features_carousel").swipeleft(function() {
+            $(this).carousel('next');
+        });
+    });
+
 //Reviews carousel indicators
     $(document).ready(function() {
         var reviewsCarousel = $('#reviews_carousel');
