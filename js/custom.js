@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+//Preloader
+// var hidePreloader = function() {
+//     $("#loader").fadeOut();
+//     $("#loader-wrapper").delay(200).fadeOut("slow");
+// };
+//     hidePreloader();
+
+ // makes sure the whole site is loaded
+    $(window).on('load', function() {
+        // will first fade out the loading animation
+        $("#loader").fadeOut();
+        //then background color will fade out slowly
+        $("#loader-wrapper").delay(200).fadeOut("slow");
+
+    });
 
 //smooth scroll readmore button and a anchor #
     $('.readmore, .home_nav a[href^="#"]').bind('click.smoothscroll', function(e) {

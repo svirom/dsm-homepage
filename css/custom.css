@@ -1794,6 +1794,108 @@ p {
 }
 /*-----------End Back to Top Button--------------------*/
 
+/*---------------------Preloader----------------------------------*/
+#loader-wrapper { 
+	position: fixed; 
+	top: 0;
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 9999; 
+	overflow: hidden; 
+	/*background-color: #485b72;*/
+	background-color: #F7F7F7;
+}
+.no-js #loader-wrapper { 
+	display: none;
+}
+#loader { 
+	display: block; 
+	position: relative; 
+	left: 50%; 
+	top: 50%; 
+	width: 100px; 
+	height: 100px; 
+	margin: -55px 0 0 -55px; 
+	border-radius: 50%; 
+	border: 3px solid transparent; 
+	/*border-top-color: #3077e8; */
+	border-top-color: #1A1A1A;
+	border-bottom-color: #1A1A1A;
+	-webkit-animation: spin 1.7s linear infinite; 
+	        animation: spin 1.7s linear infinite; 
+	z-index: 11;
+}
+#loader::before { 
+	content: " "; 
+	position: absolute; 
+	top: 5px; 
+	left: 5px; 
+	right: 5px; 
+	bottom: 5px; 
+	border-radius: 50%; 
+	border: 3px solid transparent; 
+	/*border-top-color: #e65c00;*/ 
+	border-top-color: #0089D9;
+	border-bottom-color: #0089D9;
+	-webkit-animation: spin-reverse .6s linear infinite; 
+	        animation: spin-reverse .6s linear infinite;
+}
+/*#loader::after { 
+	content: " "; 
+	position: absolute; 
+	top: 15px; 
+	left: 15px; 
+	right: 15px; 
+	bottom: 15px; 
+	border-radius: 50%; 
+	border: 3px solid transparent; 
+	border-top-color: #1A1A1A; 
+	-webkit-animation: spin 1s linear infinite; 
+	        animation: spin 1s linear infinite;
+}*/
+@-webkit-keyframes spin { 
+	0% { 
+		-webkit-transform: rotate(0deg);
+	} 
+	100% { 
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin { 
+	0% { 
+		-webkit-transform: rotate(0deg); 
+		    -ms-transform: rotate(0deg); 
+		        transform: rotate(0deg);
+	} 
+	100% { 
+		-webkit-transform: rotate(360deg); 
+		    -ms-transform: rotate(360deg); 
+		        transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes spin-reverse { 
+	0% { 
+		-webkit-transform: rotate(0deg);
+	} 
+	100% { 
+		-webkit-transform: rotate(-360deg);
+	}
+}
+@keyframes spin-reverse { 
+	0% { 
+		-webkit-transform: rotate(0deg); 
+		    -ms-transform: rotate(0deg); 
+		        transform: rotate(0deg);
+	} 
+	100% { 
+		-webkit-transform: rotate(-360deg); 
+		    -ms-transform: rotate(-360deg); 
+		        transform: rotate(-360deg);
+	}
+}
+/*-------------------End Preloader--------------------------------*/
+
 
 
 
