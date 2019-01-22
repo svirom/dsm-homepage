@@ -1,13 +1,6 @@
 $(document).ready(function() {
 
-//Preloader
-// var hidePreloader = function() {
-//     $("#loader").fadeOut();
-//     $("#loader-wrapper").delay(200).fadeOut("slow");
-// };
-//     hidePreloader();
-
- // makes sure the whole site is loaded
+// Preloader
     $(window).on('load', function() {
         // will first fade out the loading animation
         $("#loader").fadeOut();
@@ -65,29 +58,21 @@ $(document).ready(function() {
         }
     });
 //Swipe features slider slides
-    // $(document).ready(function() {
-        /*$("#features_carousel").swiperight(function() {
-            $(this).carousel('prev');
-        });
-        $("#features_carousel").swipeleft(function() {
-            $(this).carousel('next');
-        });*/
-    // });
-    $("#features_carousel").on("touchstart", function(event){
+    $("#features_carousel, #reviews_carousel").on("touchstart", function(event){
         var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one("touchmove", function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) > 10 ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -10 ){
-            $(this).carousel('prev');
-        }
+        $(this).one("touchmove", function(event){
+            var xMove = event.originalEvent.touches[0].pageX;
+            if( Math.floor(xClick - xMove) > 9 ){
+                $(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -9 ){
+                $(this).carousel('prev');
+            }
+        });
+        $("#features_carousel, #reviews_carousel").on("touchend", function(){
+                $(this).off("touchmove");
+        });
     });
-    $("#features_carousel").on("touchend", function(){
-            $(this).off("touchmove");
-    });
-});
 
 //Reviews carousel indicators
     $(document).ready(function() {
@@ -116,16 +101,16 @@ $(document).ready(function() {
     });
 
 //background of top menu
-    /*$(function () {
+    $(function () {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 400) {
+            if ( ($(this).scrollTop() > 400) && ($(document).width() >= 768) ) {
                 $('.main_nav').addClass("bkgr");
                 } 
             else {
                 $('.main_nav').removeClass("bkgr");
             }
         });     
-    });*/
+    });
 
 //Plans slider
 	var plansNames = [
@@ -237,7 +222,6 @@ $(document).ready(function() {
         });
         // prepare slider details
         var value = $( "#slider-range-min" ).slider("value");
-        //$(".ui-slider-handle").html("<img src='./img/slider_icon.png'>");
         $(".ui-slider-handle").html("<span class='slider_img'></span>");
         updateDetails(value);
         
@@ -264,7 +248,6 @@ $(document).ready(function() {
             
             // show/hide features according to plan
             if (plansItems[value] >= 2000) {
-                //$('.pro').each(function() { $(this).show(); });
                 $('.pro').each(function() { $(this).addClass('active'); });
                 if (plansItems[value] >= 10000) {
                     $('.royal').each(function() { $(this).show(); });
@@ -272,75 +255,10 @@ $(document).ready(function() {
                     $('.royal').each(function() { $(this).hide(); });
                 }
             } else {
-                //$('.pro').each(function() { $(this).hide(); });
                 $('.pro').each(function() { $(this).removeClass('active'); });
             }
         }
     });
 
-//What Do We Offer
-    /*var h = $(window).height();
-   
-    $(window).bind("scroll.once", function(){
-        if ( ($(window).scrollTop() + h) >= $("#offer_section").offset().top) {
-            weOffer();
-        }
-    });
-
-    function weOffer(){
-        var currCounter = 0;
-        sliderTimer = setInterval(changeButtons, 5000);
-
-        $(".left_section").find("#menu_wrapper li:first-child").addClass("active").end()
-                        .find(".button_text").eq(0).addClass("active");
-        $(".right_section").find(".right_panel").eq(0).css("display", "block");
-
-        $("#menu_wrapper a").hover(
-            function(){
-                var d_attr = $(this).data("count");
-                var rightAttr = $(this).attr("href");
-                clearInterval(sliderTimer);
-                $(".left_section").find("#menu_wrapper a").closest("li").removeClass("active")
-                    .eq(d_attr).addClass("active");
-                $(".left_section").find(".button_text").removeClass("active")
-                    .eq(d_attr).addClass("active");
-                $(".right_section").find(".right_panel").css("display", "none");
-                $(rightAttr).stop().fadeIn();
-            }, function(){
-                currCounter = $(this).data("count");
-                sliderTimer = setInterval(changeButtons, 5000);
-            }
-        );
-        
-        function changeButtons(){
-            var rightId = $(".left_section").find("#menu_wrapper a").eq(currCounter+1).attr("href");
-
-            if ( currCounter < ($("#menu_wrapper li").length - 1) ) {
-                $(".left_section").find("#menu_wrapper a").closest("li").removeClass("active")
-                    .eq(currCounter+1).addClass("active");
-                $(".left_section").find(".button_text").removeClass("active")
-                    .eq(currCounter+1).addClass("active");
-                $(".right_section").find(".right_panel").css("display", "none");
-                $(rightId).fadeIn();
-                currCounter++;
-            } else {
-                currCounter = -1;
-                rightId = $(".left_section").find("#menu_wrapper a").eq(0).attr("href");
-                $(".left_section").find("#menu_wrapper a").closest("li").removeClass("active")
-                    .eq(currCounter+1).addClass("active");
-                $(".left_section").find(".button_text").removeClass("active")
-                    .eq(currCounter+1).addClass("active");
-                $(".right_section").find(".right_panel").css("display", "none");
-                $(rightId).fadeIn();
-                currCounter++;
-            }
-        }
-
-        $("#menu_wrapper a").on("click", function(event){
-            event.preventDefault();
-        });
-
-        $(window).unbind("scroll.once");
-    }  */  
 
 });
