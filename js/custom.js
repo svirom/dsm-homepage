@@ -10,11 +10,11 @@ $(document).ready(function() {
     });
 
 //Add downarrow to submenus
-$('.home_nav li a').each(function() {
-    if ($(this).next().length > 0) {
-        $(this).append('&nbsp;&nbsp;<i class="fas fa-angle-double-down"></i>');
-    }
-});
+    $('.home_nav li a').each(function() {
+        if ($(this).next().length > 0) {
+            $(this).append('&nbsp;&nbsp;<i class="fas fa-angle-double-down"></i>');
+        }
+    });
 
 //smooth scroll readmore button and a anchor #
     $('.readmore, .home_nav a[href^="#"], .btn_plans').bind('click.smoothscroll', function(e) {
@@ -277,8 +277,9 @@ if ($(document).width() >= 768) {
         function updateDetails(value) {
             // if contact us
             if (isNaN(plansItems[value])) {
-                $("#amount span").text(plansItems[value]);
+                $("#amount span.values").text(plansItems[value]);
                 $("#price").hide();
+                $(".text_listings").hide();
                 $('#plan-name').text(plansNames[value]);
                 $('#price-per-list').hide();
                 $('#upgrade-button').hide();
@@ -287,24 +288,45 @@ if ($(document).width() >= 768) {
             // else 
             $('#upgrade-button').show();
             $("#price").show();
+            $(".text_listings").show();
             $('#price-per-list').show();
-            $("#amount span").text(plansItems[value]);
-            $( "#price span" ).text("$" + plansPrices[value]);
+            $("#amount span.values").text(plansItems[value]);
+            $( "#price span.values" ).text("$" + plansPrices[value]);
             var perList = Math.ceil(plansPrices[value])/plansItems[value];
             perList = ((perList * 100) % 1 === 0 ? perList.toFixed(2) : ((perList * 1000) % 1 === 0 ? perList.toFixed(3) : perList.toFixed(4)));
-            $('#price-per-list span').text(perList);
+            $('#price-per-list span.values').text(perList);
             $('#plan-name').text(plansNames[value]);
             
             // show/hide features according to plan
-            if (plansItems[value] >= 2000) {
-                $('.pro').each(function() { $(this).addClass('active'); });
+            if (plansItems[value] < 150) {
+                $('.lite, .pro').each(function() {
+                    $(this).removeClass('active');
+                });
+                $('.vendors').html('<p><i class="fas fa-check"></i>amazon.com, walmart.com</p>');
+            }
+            if ((plansItems[value] >= 150) && (plansItems[value] < 600)) {
+                $('.lite').each(function() {
+                    $(this).addClass('active');
+                });
+                $('.pro').each(function() {
+                    $(this).removeClass('active');
+                });
+                $('.vendors').html('<p><i class="fas fa-check"></i>All Source Vendors</p>');
+            }
+            if (plansItems[value] >= 600) {
+                $('.lite, .pro').each(function() {
+                    $(this).addClass('active');
+                });
+                $('.vendors').html('<p><i class="fas fa-check"></i>All Source Vendors</p>');
                 if (plansItems[value] >= 10000) {
-                    $('.royal').each(function() { $(this).show(); });
+                    $('.royal').each(function() {
+                        $(this).show();
+                    });
                 } else {
-                    $('.royal').each(function() { $(this).hide(); });
+                    $('.royal').each(function() {
+                        $(this).hide();
+                    });
                 }
-            } else {
-                $('.pro').each(function() { $(this).removeClass('active'); });
             }
         }
     });
