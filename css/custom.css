@@ -2100,6 +2100,84 @@ p {
 }
 /*-------------------End Preloader--------------------------------*/
 
+/*-----------Contact Us Modal--------------------*/
+#contact-us .modal-header {
+	border-bottom: none;
+	background-color: #0089D9;
+}
+#contact-us .modal-header h4 {
+	color: #ffffff;
+	font-weight: 700;
+}
+#contact-us .modal-header .close {
+    margin-top: -10px;
+    margin-right: -5px;
+    font-size: 28px;
+}
+.field-contactform-captcha .g-recaptcha > div {
+    max-width: 100%;
+    margin: 0px auto;
+}
+#contact-us .form-control {
+    padding-left: 18px;
+    border: 2px solid #E6E6E6;
+    color: #999999;
+    font-weight: 600;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+#contact-us input.form-control {
+	height: 44px;
+}
+#contact-us .form-control:focus {
+    border-color: #0089D9;
+    outline: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+#contact-us .btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+#contact-us .btn_send {
+	background-color: #0089D9;
+}
+#contact-us .btn_cancel {
+	color: #262626;
+	background-color: #CCCCCC;
+}
+#contact-us .btn_send:hover,
+#contact-us .btn_send:focus {
+	color: #ffffff;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	background-color: #0065A0;
+}
+#contact-us .btn_cancel:hover,
+#contact-us .btn_cancel:focus {
+	color: #262626;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	background-color: #BBBBBB;
+}
+#contact-us .modal-footer {
+	border-top: 2px solid #E6E6E6;
+}
+@media screen and (max-width: 480px) {
+	.field-contactform-captcha .g-recaptcha {
+	    -webkit-transform: scale(0.75);
+	       -moz-transform: scale(0.75);
+	        -ms-transform: scale(0.75);
+	            transform: scale(0.75);
+	    -webkit-transform-origin: 0 0;
+	       -moz-transform-origin: 0 0;
+	        -ms-transform-origin: 0 0;
+	            transform-origin: 0 0; 
+	}
+}
+/*-----------End Contact Us Modal--------------------*/
+
 
 
 

@@ -1182,7 +1182,7 @@
                         <div class="col-sm-6 col-lg-2 widget">
                             <h5>Contact us</h5>
                             <ul>
-                                <li><a href="mailto:support@dsmtool.com">Customer support</a></li>
+                                <li><a data-toggle="modal" data-target="#contact-us" href="#">Customer support</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6 col-lg-4 widget widget_fb">
@@ -1216,6 +1216,54 @@
     <a href="#" id="back_to_top"><i class="fas fa-angle-up"></i></a>
 <!-- End Back to Top Button -->
 
+<!-- Contact Us Modal -->
+    <div class="modal fade" id="contact-us" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Make a Suggestion</h4>
+                </div>
+                <form id="w0" action="/site/contact-us" method="post">
+                    <input type="hidden" name="_csrf" value="9RA5TTeMYddS3JlsuwtaxIeXdEJpFgXXDWjRpsoLh9Cjd1I_AcMkkGTlrxTDPi-gs-82MR5QS4hAP73Dr3jV5A==">
+                    <div class="modal-body text-center row">
+                        <div class="col-md-12 smb field-contactform-name required">
+                            <input type="text" id="contactform-name" class="form-control" name="ContactForm[name]" placeholder="Name" aria-required="true">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="col-md-12 smb field-contactform-email required">
+                            <input type="email" id="contactform-email" class="form-control" name="ContactForm[email]" placeholder="Email" aria-required="true">
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="col-md-12 smb field-contactform-message required">
+                            <textarea id="contactform-message" class="form-control" name="ContactForm[message]" rows="10" placeholder="What is your suggestion?" aria-required="true"></textarea>
+                            <div class="help-block"></div>
+                        </div>
+                        <div class="col-md-12 smb field-contactform-captcha required">
+                            <input type="hidden" id="contactform-captcha" name="ContactForm[captcha]">
+                            <div id="contactform-captcha-recaptcha-w0" class="g-recaptcha" data-sitekey="6LdcFVEUAAAAAEosDImzRE9dqL6fhZ1TApaGtAb7" data-input-id="contactform-captcha" data-form-id="w0">
+                                <!-- <div style="width: 304px; height: 78px;">
+                                    <div>
+                                        <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdcFVEUAAAAAEosDImzRE9dqL6fhZ1TApaGtAb7&amp;co=aHR0cHM6Ly93d3cuZHNtdG9vbC5jb206NDQz&amp;hl=en&amp;v=v1548052318968&amp;size=normal&amp;cb=s45060topeyq" width="304" height="78" role="presentation" name="a-caofwlhb8dv9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                                    </div>
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                </div> -->
+                            </div>
+                            <div class="help-block"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div id="errorMessage" style="display:none;color:red;"></div>
+                        <button type="submit" id="sendButton" class="btn btn_send">Send</button>
+                        <button type="button" class="btn btn_cancel" onclick="$(&quot;#contact-us&quot;).modal(&quot;toggle&quot;)">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- End Contact Us Modal -->
+    
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
