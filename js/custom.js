@@ -1,5 +1,7 @@
 $(document).ready(function() {
-
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 // Preloader
     $(window).on('load', function() {
         // will first fade out the loading animation
