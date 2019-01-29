@@ -438,7 +438,6 @@ p {
 	-webkit-animation: floatingImages1 4s linear infinite;
        -moz-animation: floatingImages1 4s linear infinite;
             animation: floatingImages1 4s linear infinite;
-    transform: scale(1.0);
 }
 .tooltip_images:nth-child(2) {
 	right: 565px;
@@ -460,7 +459,10 @@ p {
 	-webkit-animation: none;
        -moz-animation: none;
             animation: none;
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+	   -moz-transform: scale(1.05);
+	    -ms-transform: scale(1.05);
+	        transform: scale(1.05);
 }
 .tooltip_images > .tooltiptext {
   	visibility: hidden;
@@ -469,10 +471,10 @@ p {
   	border-radius: 6px;
   	color: #ffffff;
   	text-align: left;
-  	background-color: #555;
   	z-index: 1;
   	white-space: nowrap;
   	opacity: 0;
+  	background-color: #555;
   	-webkit-transition: all 0.6s ease;
   	        transition: all 0.6s ease;
 }
