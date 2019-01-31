@@ -90,13 +90,25 @@ $(document).ready(function() {
         }, 600, 'swing', function() {});
     });
 
-//Prevent to click links in features slider on mobile
+// Plus button in Integrations table
+    $('.integrations_plus').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).next('span').hasClass('active')) {
+            $(this).find('i').removeClass('fa-minus').addClass('fa-plus');
+        } else {
+            $(this).find('i').removeClass('fa-plus').addClass('fa-minus');
+        }
+        $(this).next('span').toggleClass('active');
+    })
+
+// Prevent to click links in features slider on mobile
     $('a.features_link').on('click', function(e) {
         if ($(document).width() < 768) {
             e.preventDefault();
         }
     });
-//Swipe features slider slides
+
+// Swipe features slider slides
     $("#features_carousel, #reviews_carousel").on("touchstart", function(event){
         var xClick = event.originalEvent.touches[0].pageX;
         $(this).one("touchmove", function(event){
@@ -113,7 +125,7 @@ $(document).ready(function() {
         });
     });
 
-//Reviews carousel indicators
+// Reviews carousel indicators
     $(document).ready(function() {
         var reviewsCarousel = $('#reviews_carousel');
         var itemsCount = reviewsCarousel.find('.review_item');
@@ -129,7 +141,7 @@ $(document).ready(function() {
         })
     })
 
-//Video Button
+// Video Button
     $(document).on("click", "button.video_button", function() {
         var $video = $(this).closest('.review_video').find('.videoWrapper iframe');
         var src = $video.attr('src');
@@ -139,7 +151,7 @@ $(document).ready(function() {
         buttonWrapper.css("display", "none");
     });
 
-//shining stars in header section (earth globe)
+// shining stars in header section (earth globe)
     $(function() {
         var body = $('#starshine'),
             template = $('.template.shine'),
@@ -170,7 +182,7 @@ $(document).ready(function() {
     });
 
 
-//Plans slider
+// Plans slider
 	var plansNames = [
         'Free Plan',
         'Lite Plan',
