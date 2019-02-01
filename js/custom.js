@@ -9,6 +9,9 @@ $(document).ready(function() {
 
     });
 
+// Bootstrap tooltip
+    $('[data-toggle="tooltip"]').tooltip(); 
+
 // Add downarrow to submenus
     $('.home_nav li a').each(function() {
         if ($(this).next().length > 0) {

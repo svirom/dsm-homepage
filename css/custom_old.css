@@ -939,7 +939,7 @@ p {
 	padding-top: 40px;
 	padding-bottom: 40px;
     background: linear-gradient(to top, rgba(0,154,242,1) 0%,rgba(0,154,242,0) 40%),
-                               url(../img/bkgr_earth1920.png) center -28% no-repeat;
+                               url(../img/unused/bkgr_earth1920.png) center -28% no-repeat;
 }
 .integrations_section h2 {
 	font: 700 36px 'Montserrat', sans-serif;
@@ -1026,19 +1026,19 @@ p {
 	background-size: 25% auto;
 }
 .integrations_section .tab-pane.us_pane {
-	background: #FFFFFF url(../img/bkgr_us.png) left center no-repeat;
+	background: #FFFFFF url(../img/unused/bkgr_us.png) left center no-repeat;
 }
 .integrations_section .tab-pane.uk_pane {
-	background: #FFFFFF url(../img/bkgr_uk.png) left center no-repeat;
+	background: #FFFFFF url(../img/unused/bkgr_uk.png) left center no-repeat;
 }
 .integrations_section .tab-pane.de_pane {
-	background: #FFFFFF url(../img/bkgr_de.png) left center no-repeat;
+	background: #FFFFFF url(../img/unused/bkgr_de.png) left center no-repeat;
 }
 .integrations_section .tab-pane.fr_pane {
-	background: #FFFFFF url(../img/bkgr_fr.png) left center no-repeat;
+	background: #FFFFFF url(../img/unused/bkgr_fr.png) left center no-repeat;
 }
 .integrations_section .tab-pane.it_pane {
-	background: #FFFFFF url(../img/bkgr_it.png) left center no-repeat;
+	background: #FFFFFF url(../img/unused/bkgr_it.png) left center no-repeat;
 }
 .integrations_pane {
 	padding-left: 25%;
@@ -1214,7 +1214,7 @@ p {
 @media (max-width: 1199px) {
 	.integrations_section {
 		background: linear-gradient(to top, rgba(0,154,242,1) 0%,rgba(0,154,242,0) 35%),
-                                 url(../img/bkgr_earth1200.png) center bottom no-repeat;
+                                 url(../img/unused/bkgr_earth1200.png) center bottom no-repeat;
 	}
 }
 @media (max-width: 991px) {
@@ -1229,7 +1229,7 @@ p {
 	.integrations_section {
 		padding-top: 10px;
 		background: linear-gradient(to top, rgba(0,154,242,1) 0%,rgba(0,154,242,0) 30%),
-                                  url(../img/bkgr_earth768.png) center bottom no-repeat;
+                                  url(../img/unused/bkgr_earth768.png) center bottom no-repeat;
 	}
 	.integrations_section h2 {
 		margin-top: 10px;

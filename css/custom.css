@@ -941,7 +941,7 @@ p {
 
 /*-----------Integrations Section------------------*/
 .integrations_section {
-	min-height: calc(100vh - 60px);
+	/*min-height: calc(100vh - 60px);*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -956,6 +956,7 @@ p {
 	border: 1px solid #E6E6E6;
 	border-bottom-width: 6px;
 	border-radius: 8px;
+	background-color: #ffffff;
 }
 .integrations_table .table {
 	margin-bottom: 0;
@@ -1009,6 +1010,9 @@ p {
 .integrations_table td i.fa-times {
 	color: #C6C6C6;
 }
+.integrations_table td > a + .tooltip {
+	width: 160px;
+}
 .tooltip_table {
 	display: inline-block;
 	position: relative;
@@ -1017,6 +1021,9 @@ p {
 }
 .notooltip_table {
 	font-size: 16px;
+}
+.notooltip_table img {
+	width: 24px;
 }
 .tooltip_table + span {
 	visibility: hidden;
@@ -1097,6 +1104,206 @@ a.integrations_plus:hover {
 	}
 }
 /*-----------End Integrations Section------------------*/
+
+/*-----------Supported Suppliers Section------------------*/
+.suppliers_section {
+	/*min-height: calc(100vh - 60px);*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 50%),
+                url(../img/bkgr_map.png) center top no-repeat;
+    /*background-size: 100% auto;*/
+    background-size: cover;
+}
+.suppliers_section h2 {
+	font: 700 36px 'Montserrat', sans-serif;
+	color: #262626;
+	text-align: center;
+}
+.suppliers_section .list_suppliers {
+	/*margin-top: 20px;*/
+	margin-bottom: 60px;	
+	padding: 10px 10px 7px;
+    /*vertical-align: middle;*/
+    /*text-align: center;*/
+    border-radius: 43px;
+    background-color: #4D4D4D;
+}
+.suppliers_section .list_suppliers::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.suppliers_section .list_suppliers > p {
+	float: left;
+	max-width: 360px;
+	margin: 0;
+	padding-left: 32px;
+	font-size: 24px;
+	font-weight: 600;
+}
+.suppliers_section .list_suppliers ul {
+	float: right;
+}
+.suppliers_section .list_suppliers li {
+	float: none;
+	position: relative;
+	display: inline-block;
+	margin-right: 1.78em;
+	padding: 3px;
+	border-radius: 50%;
+	/*border: 5px solid rgba(255, 255, 255, 0.4);*/
+	background-color: rgba(255, 255, 255, 0.6)
+}
+.suppliers_section .list_suppliers .nav-pills > li + li {
+	margin-left: 0;
+}
+.suppliers_section .list_suppliers li:last-child {
+	margin-right: 0;
+}
+.suppliers_section .list_suppliers li::after {
+	position: absolute;
+    content: "";
+    display: inline-block;
+    left: 50%;
+    bottom: -40px;
+    -webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);  
+	    -ms-transform: translateX(-50%); 
+	     -o-transform: translateX(-50%); 
+	        transform: translateX(-50%);
+    font: 900 18px 'Raleway', sans-serif;
+    color: #262626;
+    letter-spacing: 1px;
+}
+.suppliers_section .list_suppliers li.list_us::after {
+	content: "USA";
+}
+.suppliers_section .list_suppliers li.list_uk::after {
+	content: "UK";
+}
+.suppliers_section .list_suppliers li.list_ca::after {
+	content: "Canada";
+}
+.suppliers_section .list_suppliers li.list_sp::after {
+	content: "Spain";
+}
+.suppliers_section .list_suppliers li.list_de::after {
+	content: "Germany";
+}
+.suppliers_section .list_suppliers li.list_fr::after {
+	content: "France";
+}
+.suppliers_section .list_suppliers li.list_it::after {
+	content: "Italy";
+}
+.suppliers_section .list_suppliers a {
+	margin-left: 0;
+    padding: 0;
+    border-radius: 50%;
+}
+.suppliers_section .list_suppliers img {
+	max-width: 60px;
+	padding: 4px;
+	/*max-width: 80px;
+	padding: 8px;*/
+	border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+.suppliers_section .list_suppliers li:hover, 
+.suppliers_section .list_suppliers li.active {
+	background-color: #30ABF2;
+}
+.suppliers_section .list_suppliers li:hover img, 
+.suppliers_section .list_suppliers li.active img {
+	opacity: 1;
+}
+.suppliers_section .list_suppliers li:hover::after, 
+.suppliers_section .list_suppliers li.active::after {
+	color: #30ABF2;
+}
+/*.suppliers_section .list_suppliers .nav-pills > li.active > a, 
+.suppliers_section .list_suppliers .nav-pills > li.active > a:focus, 
+.suppliers_section .list_suppliers .nav-pills > li.active > a:hover {
+    color: #fff;
+    background-color: transparent;
+}*/
+/*.suppliers_section .list_suppliers .nav > li > a:focus, 
+.suppliers_section .list_suppliers .nav > li > a:hover {
+    background-color: transparent;
+}*/
+@media (max-width: 1440px) {
+	/*.suppliers_section .list_suppliers {
+	    margin-top: 10px;
+	}*/
+	/*.suppliers_section .list_suppliers li {
+		border-width: 3px;
+	}*/
+	/*.suppliers_section .list_suppliers img {
+	    max-width: 60px;
+	    padding: 4px;
+	}*/
+	/*.suppliers_section .list_suppliers li::after {
+	    bottom: -34px;
+	    font-size: 22px;
+	}*/
+}
+@media (max-width: 1199px) {
+	.suppliers_section .list_suppliers {
+		padding-bottom: 10px;
+	}
+	.suppliers_section .list_suppliers > p {
+		max-width: 320px;
+		font-size: 20px;
+	}
+	.suppliers_section .list_suppliers li {
+		margin-right: 10px;
+	}
+	.suppliers_section .list_suppliers li::after {
+		font-size: 16px;
+	}
+}
+@media (max-width: 991px) {
+	.suppliers_section .list_suppliers > p {
+		float: none;
+		max-width: none;
+		padding: 10px;
+		text-align: center;
+	}
+	.suppliers_section .list_suppliers ul {
+		float: none;
+		text-align: center;
+	}
+	.suppliers_section .list_suppliers li {
+		margin-right: 16px;
+	}
+}
+@media (max-width: 767px) {
+	.suppliers_section h2 {
+		margin-top: 10px;
+		font-size: 28px;
+	}
+	.suppliers_section .list_suppliers {
+		margin-bottom: 20px;
+		padding: 10px 5px;
+	}
+	.suppliers_section .list_suppliers li {
+		/*border: 3px solid rgba(38, 38, 38, 0.3);*/
+		margin-right: 0;
+	}
+	.suppliers_section .list_suppliers li::after {
+		display: none;
+	}
+	.suppliers_section .list_suppliers img {
+		max-width: 50px;
+		padding: 2px;
+	}
+	/*.integrations_section .list_integrations li::after {
+		display: none;
+	}*/
+}
+/*-----------End Supported Suppliers Section------------------*/
 
 /*-----------Try & FBCommunity Sections--------------------*/
 .try_section {

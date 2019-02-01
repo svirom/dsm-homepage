@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DSM Homepage</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500,600,700,800|Raleway:400,600,700|Source+Sans+Pro:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat:400,500,600,700,800|Raleway:400,600,700,900|Source+Sans+Pro:400,900" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" rel="stylesheet">
@@ -166,7 +166,11 @@
                                     <td><i class="fas fa-check"></i></td>
                                     <td><i class="fas fa-times"></i></td>
                                     <td><i class="fas fa-check"></i></td>
-                                    <td><span class="notooltip_table">Worldwide</span></td>
+                                    <td>
+                                        <span class="notooltip_table">
+                                            <img src="img/flag_us.png" alt="Icon">
+                                        </span> 
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><img src="img/integrations_ebay.png" alt="Image"></td>
@@ -202,6 +206,1054 @@
         </div>
     </section>
 <!-- End Integrations section -->
+
+<!-- Supported Suppliers section -->
+    <section class="main_container suppliers_section" id="suppliers_section">
+        <div class="container_inner">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="list_suppliers">
+                        <p>Filter Suppliers by eBay Marketplace</p>
+                        <ul class="nav nav-pills">
+                            <li class="active list_us">
+                                <a data-toggle="pill" href="#list_us">
+                                    <img src="img/flag_us.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_uk">
+                                <a data-toggle="pill" href="#list_uk">
+                                    <img src="img/flag_uk.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_ca">
+                                <a data-toggle="pill" href="#list_ca">
+                                    <img src="img/flag_ca.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_sp">
+                                <a data-toggle="pill" href="#list_sp">
+                                    <img src="img/flag_sp.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_de">
+                                <a data-toggle="pill" href="#list_de">
+                                    <img src="img/flag_de.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_fr">
+                                <a data-toggle="pill" href="#list_fr">
+                                    <img src="img/flag_fr.png" alt="Icon">
+                                </a>
+                            </li>
+                            <li class="list_it">
+                                <a data-toggle="pill" href="#list_it">
+                                    <img src="img/flag_it.png" alt="Icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <h2>Supported Suppliers</h2>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="tab-content">
+
+                        <!-- suppliers USA -->
+                        <div id="list_us" class="tab-pane fade in active">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers USA -->
+
+                        <!-- suppliers UK -->
+                        <div id="list_uk" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers UK -->
+
+                        <!-- suppliers Canada -->
+                        <div id="list_ca" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers Canada -->
+
+                        <!-- suppliers Spain -->
+                        <div id="list_sp" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers Spain -->
+
+                        <!-- suppliers Germany -->
+                        <div id="list_de" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers Germany -->
+
+                        <!-- suppliers France -->
+                        <div id="list_fr" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers France -->
+
+                        <!-- suppliers Italy -->
+                        <div id="list_it" class="tab-pane fade">
+                            <div class="table-responsive integrations_table">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Supplier</th>
+                                            <th>Lister</th>
+                                            <th>Repricer</th>
+                                            <th>Auto Order</th>
+                                            <th>Chrome Extension</th>
+                                            <th>Ships to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Amazon in the help center">
+                                                    <img src="img/integrations_amazon.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="tooltip_table">International*</span>
+                                                <span>
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                    <img src="img/flag_fr.png" alt="Icon">
+                                                    <img src="img/flag_it.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Overstock in the help center">
+                                                    <img src="img/integrations_overstock.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Aliexpress in the help center">
+                                                    <img src="img/integrations_aliexpress.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Walmart in the help center">
+                                                    <img src="img/integrations_walmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>1h</td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Sears in the help center">
+                                                    <img src="img/integrations_sears.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>2h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_uk.png" alt="Icon">
+                                                    <img src="img/flag_sp.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Target in the help center">
+                                                    <img src="img/integrations_target.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td><span class="notooltip_table">Worldwide</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="/help" data-toggle="tooltip" data-placement="right" title="Learn more about Kmart in the help center">
+                                                    <img src="img/integrations_kmart.png" alt="Image">
+                                                </a>
+                                            </td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>8h</td>
+                                            <td><i class="fas fa-times"></i></td>
+                                            <td><i class="fas fa-check"></i></td>
+                                            <td>
+                                                <span class="notooltip_table">
+                                                    <img src="img/flag_us.png" alt="Icon">
+                                                    <img src="img/flag_ca.png" alt="Icon">
+                                                    <img src="img/flag_de.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="8">
+                                                Future Suppliers 
+                                                <a href="#" class="integrations_plus">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                                <span>
+                                                    <img src="img/integrations_shopify.png" alt="Icon">
+                                                    <img src="img/integrations_woocommerce.png" alt="Icon">
+                                                    <img src="img/integrations_wish.png" alt="Icon">
+                                                    <img src="img/integrations_amazon.png" alt="Icon">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div> <!-- end suppliers Italy -->
+
+                    </div> <!-- end tab-content-->
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Supported Suppliers section -->
 
 <!-- Try section -->
     <section class="main_container try_section">
