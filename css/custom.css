@@ -941,7 +941,6 @@ p {
 
 /*-----------Integrations Section------------------*/
 .integrations_section {
-	/*min-height: calc(100vh - 60px);*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -1003,6 +1002,7 @@ p {
 }
 .integrations_table td img {
 	max-width: 120px;
+	max-height: 28px;
 }
 .integrations_table td i.fa-check {
 	color: #008ADD;
@@ -1092,27 +1092,36 @@ a.integrations_plus:hover {
 	margin-right: 0;
 }
 @media (max-width: 1199px) {
-	
+	.integrations_section > .container_inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 @media (max-width: 991px) {
 	
 }
 @media (max-width: 767px) {
+	.integrations_section {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.integrations_section h2 {
 		margin-top: 10px;
 		font-size: 28px;
+	}
+	.integrations_table {
+		margin: 15px 0;
+		font-size: 16px;
 	}
 }
 /*-----------End Integrations Section------------------*/
 
 /*-----------Supported Suppliers Section------------------*/
 .suppliers_section {
-	/*min-height: calc(100vh - 60px);*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 50%),
                 url(../img/bkgr_map.png) center top no-repeat;
-    /*background-size: 100% auto;*/
     background-size: cover;
 }
 .suppliers_section h2 {
@@ -1121,11 +1130,9 @@ a.integrations_plus:hover {
 	text-align: center;
 }
 .suppliers_section .list_suppliers {
-	/*margin-top: 20px;*/
+	margin-top: 20px;
 	margin-bottom: 60px;	
 	padding: 10px 10px 7px;
-    /*vertical-align: middle;*/
-    /*text-align: center;*/
     border-radius: 43px;
     background-color: #4D4D4D;
 }
@@ -1152,7 +1159,6 @@ a.integrations_plus:hover {
 	margin-right: 1.78em;
 	padding: 3px;
 	border-radius: 50%;
-	/*border: 5px solid rgba(255, 255, 255, 0.4);*/
 	background-color: rgba(255, 255, 255, 0.6)
 }
 .suppliers_section .list_suppliers .nav-pills > li + li {
@@ -1205,8 +1211,6 @@ a.integrations_plus:hover {
 .suppliers_section .list_suppliers img {
 	max-width: 60px;
 	padding: 4px;
-	/*max-width: 80px;
-	padding: 8px;*/
 	border-radius: 50%;
     background-color: #ffffff;
     opacity: 0.6;
@@ -1223,33 +1227,11 @@ a.integrations_plus:hover {
 .suppliers_section .list_suppliers li.active::after {
 	color: #30ABF2;
 }
-/*.suppliers_section .list_suppliers .nav-pills > li.active > a, 
-.suppliers_section .list_suppliers .nav-pills > li.active > a:focus, 
-.suppliers_section .list_suppliers .nav-pills > li.active > a:hover {
-    color: #fff;
-    background-color: transparent;
-}*/
-/*.suppliers_section .list_suppliers .nav > li > a:focus, 
-.suppliers_section .list_suppliers .nav > li > a:hover {
-    background-color: transparent;
-}*/
-@media (max-width: 1440px) {
-	/*.suppliers_section .list_suppliers {
-	    margin-top: 10px;
-	}*/
-	/*.suppliers_section .list_suppliers li {
-		border-width: 3px;
-	}*/
-	/*.suppliers_section .list_suppliers img {
-	    max-width: 60px;
-	    padding: 4px;
-	}*/
-	/*.suppliers_section .list_suppliers li::after {
-	    bottom: -34px;
-	    font-size: 22px;
-	}*/
-}
 @media (max-width: 1199px) {
+	.suppliers_section > .container_inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.suppliers_section .list_suppliers {
 		padding-bottom: 10px;
 	}
@@ -1280,6 +1262,10 @@ a.integrations_plus:hover {
 	}
 }
 @media (max-width: 767px) {
+	.suppliers_section {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.suppliers_section h2 {
 		margin-top: 10px;
 		font-size: 28px;
@@ -1289,7 +1275,6 @@ a.integrations_plus:hover {
 		padding: 10px 5px;
 	}
 	.suppliers_section .list_suppliers li {
-		/*border: 3px solid rgba(38, 38, 38, 0.3);*/
 		margin-right: 0;
 	}
 	.suppliers_section .list_suppliers li::after {
@@ -1299,9 +1284,11 @@ a.integrations_plus:hover {
 		max-width: 50px;
 		padding: 2px;
 	}
-	/*.integrations_section .list_integrations li::after {
-		display: none;
-	}*/
+	.integrations_table .table > thead > tr > th:first-child, 
+	.integrations_table .table > tbody > tr > td:first-child, 
+	.integrations_table .table > tfoot > tr > td:first-child {
+		padding-left: 20px;
+	}
 }
 /*-----------End Supported Suppliers Section------------------*/
 
@@ -1521,11 +1508,15 @@ a.integrations_plus:hover {
 	padding-right: 25px;
 }
 .features_progress.progress {
-    position: relative;
+    /*position: relative;*/
     height: 3px;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
     max-width: 448px;
-    margin-top: 3em;
-    margin-bottom: 5.75em;
+    margin-left: 15px;
+    /*margin-top: 3em;
+    margin-bottom: 5.75em;*/
     margin-right: 2.9em;
     border-radius: 3px;
     -webkit-box-shadow: none;
@@ -1541,6 +1532,7 @@ a.integrations_plus:hover {
 	top: -4px;
 	border-radius: 50%;
 	background-color: #CCCCCC;
+	cursor: pointer;
 }
 .progress_point:nth-of-type(2) {
 	left: 25%;
@@ -1561,6 +1553,7 @@ a.integrations_plus:hover {
 	width: 20px;
 	height: 20px;
 	top: -8px;
+	margin-left: -4px;
 	background-color: #0089D9;
 	background: -moz-radial-gradient(circle at center, #ffffff, #ffffff 6px, #0089D9 7px, #0089D9);
 	background: -o-radial-gradient(circle at center, #ffffff, #ffffff 6px, #0089D9 7px, #0089D9);
