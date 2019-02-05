@@ -111,16 +111,70 @@ $(document).ready(function() {
         }
     });
 
-// Swipe features slider slides
+// Swipe features/reviews slider slides
     $("#features_carousel, #reviews_carousel").on("touchstart", function(event){
         var xClick = event.originalEvent.touches[0].pageX;
         $(this).one("touchmove", function(event){
             var xMove = event.originalEvent.touches[0].pageX;
+
+            var currIndicator = $(this).find('.progress_point.active');
+            var labelIndicator = $(this).find('.features_labels label');
+
             if( Math.floor(xClick - xMove) > 9 ){
                 $(this).carousel('next');
+
+                // indicators on touch next
+                $(currIndicator).addClass('in');
+                if ($(currIndicator).attr('data-slide-to') === '0') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
+                    $(labelIndicator).removeClass('current').eq(1).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '1') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
+                    $(labelIndicator).removeClass('current').eq(2).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '2') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
+                    $(labelIndicator).removeClass('current').eq(3).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '3') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
+                    $(labelIndicator).removeClass('current').eq(4).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '4') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
+                    $(labelIndicator).removeClass('current').eq(0).addClass('current');
+                    $(this).find('.progress_point').removeClass('in');
+                }
+
             }
             else if( Math.floor(xClick - xMove) < -9 ){
                 $(this).carousel('prev');
+
+                // indicators on touch prev
+                $(currIndicator).removeClass('in');
+                if ($(currIndicator).attr('data-slide-to') === '0') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
+                    $(labelIndicator).removeClass('current').eq(4).addClass('current');
+                    $(this).find('.progress_point').addClass('in');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '1') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
+                    $(labelIndicator).removeClass('current').eq(0).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '2') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
+                    $(labelIndicator).removeClass('current').eq(1).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '3') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
+                    $(labelIndicator).removeClass('current').eq(2).addClass('current');
+                }
+                if ($(currIndicator).attr('data-slide-to') === '4') {
+                    $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
+                    $(labelIndicator).removeClass('current').eq(3).addClass('current');
+                }
+
             }
         });
         $("#features_carousel, #reviews_carousel").on("touchend", function(){
@@ -128,71 +182,93 @@ $(document).ready(function() {
         });
     });
 
-    $("#features_carousel span[data-target='#features_carousel']").on('click', function(e){
-        // console.log('clicked');
-        // console.log(e.target);
-        var $event = e.target;
-        $(this).prevAll('span').addClass('in');
-        $(this).nextAll('span').removeClass('in');
-        if ( $(this).attr('data-slide-to') === '0' ) {
-            $(this).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
-        }
-        if ( $(this).attr('data-slide-to') === '1' ) {
-            $(this).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
-        }
-        if ( $(this).attr('data-slide-to') === '2' ) {
-            $(this).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
-        }
-        if ( $(this).attr('data-slide-to') === '3' ) {
-            $(this).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
-        }
-        if ( $(this).attr('data-slide-to') === '4' ) {
-            $(this).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
-        }
-
-    })
-    $("#features_carousel").on('click', function(e){
-        
-        var point = e.target;
+// features carousel indicators behavior on click (arrows, indicators)
+    $("#features_carousel").on('click', function(e) {
+        var targetIndicator = e.target;
         var currIndicator = $(this).find('.progress_point.active');
+        var labelIndicator = $(this).find('.features_labels label');
+
         $(currIndicator).prevAll('span').addClass('in');
         $(currIndicator).nextAll('span').removeClass('in');
-        if ( $(point).hasClass('fa-arrow-right') ) {
+
+        // click on indicator
+        if ($(targetIndicator).hasClass('progress_point')) {
+            $(targetIndicator).prevAll('span').addClass('in');
+            $(targetIndicator).nextAll('span').removeClass('in');
+            if ($(targetIndicator).attr('data-slide-to') === '0') {
+                $(targetIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
+                $(labelIndicator).removeClass('current').eq(0).addClass('current');
+            }
+            if ($(targetIndicator).attr('data-slide-to') === '1') {
+                $(targetIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
+                $(labelIndicator).removeClass('current').eq(1).addClass('current');
+            }
+            if ($(targetIndicator).attr('data-slide-to') === '2') {
+                $(targetIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
+                $(labelIndicator).removeClass('current').eq(2).addClass('current');
+            }
+            if ($(targetIndicator).attr('data-slide-to') === '3') {
+                $(targetIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
+                $(labelIndicator).removeClass('current').eq(3).addClass('current');
+            }
+            if ($(targetIndicator).attr('data-slide-to') === '4') {
+                $(targetIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
+                $(labelIndicator).removeClass('current').eq(4).addClass('current');
+            }
+        }
+
+        // click on arrow right (next)
+        if ($(targetIndicator).hasClass('fa-arrow-right')) {
             $(currIndicator).addClass('in');
-            if ( $(currIndicator).attr('data-slide-to') === '4' ) {
+            if ($(currIndicator).attr('data-slide-to') === '0') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
+                $(labelIndicator).removeClass('current').eq(1).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '1') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
+                $(labelIndicator).removeClass('current').eq(2).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '2') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
+                $(labelIndicator).removeClass('current').eq(3).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '3') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
+                $(labelIndicator).removeClass('current').eq(4).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '4') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
+                $(labelIndicator).removeClass('current').eq(0).addClass('current');
                 $(this).find('.progress_point').removeClass('in');
             }
         }
-        
-            console.log(point);
-        
-       
-    })
 
-    // $('#features_carousel').on('slide.bs.carousel', function (e) {
-    //     var currIndicator = $(this).find('.progress_point.active');
-    //     var ind = e.relatedTarget;
-    //     console.log(e.relatedTarget);
-    //     var b = $(ind).closest('.carousel').find('.progress_point.active').attr('data-slide-to');
-    //     console.log(b);
-    //     // $(currIndicator).prevAll('span').addClass('in');
-    //     // $(currIndicator).nextAll('span').removeClass('in');
-    //     // if ( $(currIndicator).attr('data-slide-to') === '0' ) {
-    //     //     $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
-    //     // }
-    //     // if ( $(currIndicator).attr('data-slide-to') === '1' ) {
-    //     //     $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
-    //     // }
-    //     // if ( $(currIndicator).attr('data-slide-to') === '2' ) {
-    //     //     $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
-    //     // }
-    //     // if ( $(currIndicator).attr('data-slide-to') === '3' ) {
-    //     //     $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
-    //     // }
-    //     // if ( $(currIndicator).attr('data-slide-to') === '4' ) {
-    //     //     $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
-    //     // }
-    // })
+        // click on arrow left (prev)
+        if ($(targetIndicator).hasClass('fa-arrow-left')) {
+            $(currIndicator).removeClass('in');
+            if ($(currIndicator).attr('data-slide-to') === '0') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '100%');
+                $(labelIndicator).removeClass('current').eq(4).addClass('current');
+                $(this).find('.progress_point').addClass('in');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '1') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '0%');
+                $(labelIndicator).removeClass('current').eq(0).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '2') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '25%');
+                $(labelIndicator).removeClass('current').eq(1).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '3') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '50%');
+                $(labelIndicator).removeClass('current').eq(2).addClass('current');
+            }
+            if ($(currIndicator).attr('data-slide-to') === '4') {
+                $(currIndicator).closest('.carousel-indicators').find('.progress-bar').css('width', '75%');
+                $(labelIndicator).removeClass('current').eq(3).addClass('current');
+            }
+        }
+    })
 
 // Reviews carousel indicators
     $(document).ready(function() {
@@ -386,6 +462,13 @@ $(document).ready(function() {
             perList = ((perList * 100) % 1 === 0 ? perList.toFixed(2) : ((perList * 1000) % 1 === 0 ? perList.toFixed(3) : perList.toFixed(4)));
             $('#price-per-list span.values').text(perList);
             $('#plan-name').text(plansNames[value]);
+
+            // change items on free plan
+            if (plansItems[value] == 50) {
+                $('#price-per-list').addClass('free');
+            } else {
+                $('#price-per-list').removeClass('free');
+            }
             
             // show/hide features according to plan
             if (plansItems[value] < 150) {

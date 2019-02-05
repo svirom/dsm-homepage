@@ -953,7 +953,7 @@ p {
 	margin: 30px 0;
 	font: 600 18px/1.25 'Raleway', sans-serif;
 	border: 1px solid #E6E6E6;
-	border-bottom-width: 6px;
+	border-bottom-width: 4px;
 	border-radius: 8px;
 	background-color: #ffffff;
 }
@@ -1130,7 +1130,7 @@ a.integrations_plus:hover {
 	text-align: center;
 }
 .suppliers_section .list_suppliers {
-	margin-top: 20px;
+	margin-top: 30px;
 	margin-bottom: 60px;	
 	padding: 10px 10px 7px;
     border-radius: 43px;
@@ -1178,7 +1178,7 @@ a.integrations_plus:hover {
 	    -ms-transform: translateX(-50%); 
 	     -o-transform: translateX(-50%); 
 	        transform: translateX(-50%);
-    font: 900 18px 'Raleway', sans-serif;
+    font: 700 18px 'Raleway', sans-serif;
     color: #262626;
     letter-spacing: 1px;
 }
@@ -1397,7 +1397,7 @@ a.integrations_plus:hover {
 /*-----------Features Section--------------------*/
 .features_section {
 	padding-top: 4.7%;
-	padding-bottom: 4.7%;
+	padding-bottom: 80px;
 	background-color: #F7F7F7;
 }
 .features_section .carousel-control {
@@ -1482,6 +1482,13 @@ a.integrations_plus:hover {
 .item_features {
 	max-width: 532px;
 	padding-right: 25px;
+	padding-bottom: 40px;
+}
+.item_features .features_link {
+	display: inline-block;
+	margin-top: 10px;
+	font: 600 16px 'Raleway', sans-serif;
+    color: #0089D9;
 }
 .features_section p {
 	margin: 0;
@@ -1508,16 +1515,16 @@ a.integrations_plus:hover {
 	padding-right: 25px;
 }
 .features_progress.progress {
-    /*position: relative;*/
+    position: relative;
     height: 3px;
     left: 50%;
-    bottom: 0;
+    bottom: -10px;
     width: 100%;
     max-width: 448px;
     margin-left: 15px;
     /*margin-top: 3em;
     margin-bottom: 5.75em;*/
-    margin-right: 2.9em;
+    /*margin-right: 2.9em;*/
     border-radius: 3px;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -1549,7 +1556,8 @@ a.integrations_plus:hover {
 .progress_point.in {
 	background-color: #0089D9;
 }
-.progress_point.active {
+.progress_point.active,
+.progress_point:hover {
 	width: 20px;
 	height: 20px;
 	top: -8px;
@@ -1593,7 +1601,8 @@ a.integrations_plus:hover {
 .features_labels label:nth-of-type(5) {
 	left: 100%;
 }
-.features_labels label.active {
+.features_labels label.current {
+	/*margin-top: 1.4em;*/
 	color: #0089D9;
 }
 @media (max-width: 1440px) {
@@ -1617,12 +1626,25 @@ a.integrations_plus:hover {
 	.features_section h2 {
 		font-size: 32px;
 	}
+	.features_progress.progress {
+		padding-right: 10px;
+	}
+}
+@media (max-width: 991px) {
+	.item_features {
+		padding-bottom: 10px;
+	}
+	.features_progress.progress {
+		width: auto;
+		left: 0;
+		margin: 2em 2.9em 1.5em 1em;
+		padding-right: 0;
+	}
 }
 @media (max-width: 767px) {
 	.features_section .carousel-control.left,
 	.features_section .carousel-control.right {
 	    top: 0;
-
 	}
 	.features_section .carousel-control.left {
 		margin-top: 100px;
@@ -1639,10 +1661,6 @@ a.integrations_plus:hover {
 	}
 	.features_img {
 		padding: 20px 50px 0 0;
-	}
-	.features_progress.progress {
-		margin-top: 2em;
-		margin-left: 1em;
 	}
 }
 /*-----------End Features Section--------------------*/
@@ -1842,6 +1860,17 @@ a.integrations_plus:hover {
 #price-per-list:focus {
     outline: none;
 }
+#price-per-list.free span:not(.free) {
+	display: none;
+}
+.span_listings.free {
+	display: inline-block;
+	padding: 7px 0;
+	font-size: 22px;
+}
+#price-per-list:not(.free) span.free {
+	display: none;
+}
 .features {
 	border-top: none;
 	text-align: left;
@@ -2008,7 +2037,7 @@ a.integrations_plus:hover {
 }
 .reviews_section .carousel_wrapper {
 	padding: 30px;
-	border-bottom: 4px solid #E6E6E6;
+	border-bottom: 3px solid #E6E6E6;
 	border-radius: 8px;
 	background-color: #ffffff;
 }
