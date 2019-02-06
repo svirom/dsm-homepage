@@ -22,15 +22,15 @@ $(document).ready(function() {
 // smooth scroll readmore button and a anchor #
     $('.readmore, .home_nav a[href^="#"], .btn_plans').bind('click.smoothscroll', function(e) {
         var target = this.hash,
-            $target = $(target);
+        $target = $(target);
         e.preventDefault();
 
         if (this.hash) {
             var topDiff = $target.offset().top;
 
-            if ((this.hash == "#pricing") && ($(document).width() >= 768)) {
+            if ( (this.hash == "#pricing") && ($(document).width() >= 768) ) {
                 topDiff = topDiff - 20;
-            } else if ((this.hash == "#integrations_section") && ($(document).width() >= 768)) {
+            } else if ( (this.hash == "#integrations_section") && ($(document).width() >= 768) ) {
                 topDiff = topDiff - 20;
             } else {
                 topDiff = topDiff - 60;
@@ -46,7 +46,7 @@ $(document).ready(function() {
     });
 
 // show/hide submenu on hover
-    if ($(document).width() >= 768) {
+    if ( $(document).width() >= 768 ) {
         $('.home_nav .dropdown').on({
             mouseenter: function() {
                 $(this).find('ul').stop().slideDown(300);
@@ -96,7 +96,7 @@ $(document).ready(function() {
 // Plus button in Integrations table
     $('.integrations_plus').on('click', function(e) {
         e.preventDefault();
-        if ($(this).next('span').hasClass('active')) {
+        if ( $(this).next('span').hasClass('active') ) {
             $(this).find('i').removeClass('fa-minus').addClass('fa-plus');
         } else {
             $(this).find('i').removeClass('fa-plus').addClass('fa-minus');

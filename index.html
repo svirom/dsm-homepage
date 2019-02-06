@@ -10,7 +10,7 @@
     <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,13 +19,15 @@
     <![endif]-->
 </head>
 <body>
+<!-- Loader -->
     <script>
         document.querySelector('html').classList.remove('no-js');
     </script>
     <div id="loader-wrapper">
         <div id="loader"></div>
     </div>
-<!-- Header section -->
+
+<!-- Main Navigation section -->
     <nav class="navbar navbar-fixed-top main_nav">
         <div class="main_container">
             <div class="navbar-header">
@@ -61,7 +63,7 @@
             </div>
         </div>
     </nav>
-<!-- End Header section -->
+<!-- End Main Navigation section -->
 
 <!-- Header section -->
     <section class="main_container home_section" id="home_section">
@@ -125,7 +127,7 @@
                 </div>
                 <div class="col-sm-12">  
                     <div class="table-responsive integrations_table">
-                        <table class="table">
+                        <table class="table"> <!-- Integrations table -->
                             <thead>
                                 <tr>
                                     <th>Store</th>
@@ -1477,7 +1479,7 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
 
-                        <div class="item active">
+                        <div class="item active"> <!-- Rapid Lister slide -->
                             <div class="row">
                                 <div class="col-sm-6 col-sm-push-6">
                                     <div class="item_features">
@@ -1499,7 +1501,7 @@
                             </div>
                         </div>
 
-                        <div class="item">
+                        <div class="item"> <!-- Repricer & Store optimization slide -->
                             <div class="row">
                                 <div class="col-sm-6 col-sm-push-6">
                                     <div class="item_features">
@@ -1508,7 +1510,7 @@
                                         <h2>Smart Repricing & Store Optimization</h2>
                                         <p>Maintain high seller ranking with price and quantity monitoring from multiple sources.</p>
                                         <p>Smart filters, advanced edit options and alerts will help you optimize your store.</p>
-                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Rapid Lister">
+                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Repricer & Store optimization">
                                             Learn more
                                         </a>
                                     </div>
@@ -1521,7 +1523,7 @@
                             </div>
                         </div>
 
-                        <div class="item">
+                        <div class="item"> <!-- Sales statistics slide -->
                             <div class="row">
                                 <div class="col-sm-6 col-sm-push-6">
                                     <div class="item_features">
@@ -1530,7 +1532,7 @@
                                         <h2>Statistics and store performance analysis</h2>
                                         <p>Make more money - Track your profits and growth, manage your sales and shipment status.</p>
                                         <p>Increase your feedback count with automatic messages and customer feedback request.</p>
-                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Rapid Lister">
+                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Sales statistics">
                                             Learn more
                                         </a>
                                     </div>
@@ -1543,7 +1545,7 @@
                             </div>
                         </div>
 
-                        <div class="item">
+                        <div class="item"> <!-- Auto order slide -->
                             <div class="row">
                                 <div class="col-sm-6 col-sm-push-6">
                                     <div class="item_features">
@@ -1552,7 +1554,7 @@
                                         <h2>Auto Ordering & Tracking number updates</h2>
                                         <p>Our Automated Ordering System will free you from the hassle of the daily</p>
                                         <p>ordering routine, and reduce the risk of loss due to price or stock changes.</p>
-                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Rapid Lister">
+                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Auto order">
                                             Learn more
                                         </a>
                                     </div>
@@ -1565,7 +1567,7 @@
                             </div>
                         </div>
 
-                        <div class="item">
+                        <div class="item"> <!-- Customer support system slide -->
                             <div class="row">
                                 <div class="col-sm-6 col-sm-push-6">
                                     <div class="item_features">
@@ -1574,7 +1576,7 @@
                                         <h2>Smart CRM for dropshipping</h2>
                                         <p>Receive customer messages and eBay updates directly to DSM Messages Center.</p>
                                         <p>Become a pro with our automatic messages system, and ready-made reply templates.</p>
-                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Rapid Lister">
+                                        <a href="https://dsmtool.com" target="_blank" class="features_link" title="Click to learn more about Customer support system">
                                             Learn more
                                         </a>
                                     </div>
@@ -1617,6 +1619,7 @@
                         <i class="fas fa-arrow-right"></i>
                         <span class="sr-only">Next</span>
                     </a>
+
                 </div>
             </div>
         </div>
@@ -1639,7 +1642,7 @@
                             <div class="outer_listings">
                                 <p id="price"><span class="span_listings">Just</span><span class="values"></span> /mo</p>
                                 <p class="text_listings">for up to</p>
-                                <p id="amount"><!--  <i class="fas fa-arrow-right"></i>  --><span class="values"></span> /listings</p>
+                                <p id="amount"><span class="values"></span> /listings</p>
                             </div>
                             <div class="outer_prices">
                                 <p id="price-per-list">
@@ -1741,11 +1744,11 @@
                     <div id="reviews_carousel" class="carousel slide" data-interval="false">
                         
                         <div class="carousel_wrapper">
-                            <!-- Wrapper for slides -->
 
+                            <!-- Wrapper for slides -->
                             <div class="carousel-inner">
 
-                            	<div class="item review_item active">
+                            	<div class="item review_item active"> <!-- Review item -->
                                     <div class="review_image">
                                         <img src="img/bkgr_review.jpg" alt="Image">
                                     </div>
@@ -1768,7 +1771,7 @@
                                     </div>
                                 </div>
 
-                                <div class="item review_item">
+                                <div class="item review_item"> <!-- Review item -->
                                     <div class="review_image">
                                         <img src="img/bkgr_review.jpg" alt="Image">
                                     </div>
@@ -1791,7 +1794,7 @@
                                     </div>
                                 </div>
 
-                                <div class="item review_item">
+                                <div class="item review_item"> <!-- Review item -->
                                     <div class="review_image">
                                         <img src="img/bkgr_review.jpg" alt="Image">
                                     </div>
@@ -1844,8 +1847,9 @@
             <div class="col-sm-12">
                 <div class="container_inner">
                     <div class="row">
+
                         <div class="col-sm-4">
-                            <div class="widget">
+                            <div class="widget"> <!-- Widget -->
                                 <h5>DSM Tool</h5>
                                 <ul>
                                     <li><a href="#">Start here</a></li>
@@ -1858,7 +1862,7 @@
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="widget">
+                            <div class="widget"> <!-- Widget -->
                                 <h5>Support</h5>
                                 <ul>
                                     <li><a href="#">Help Center</a></li>
@@ -1870,7 +1874,7 @@
                         </div>
 
                         <div class="col-sm-4">
-                            <div class="widget widget_follow_us">
+                            <div class="widget widget_follow_us"> <!-- Widget -->
                                 <h5>Channels</h5>
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -1881,7 +1885,7 @@
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                             </div>
-                            <div class="widget widget_fb">
+                            <div class="widget widget_fb"> <!-- Widget -->
                                 <h5>Communities</h5>
                                 <ul>
                                     <li><a href="#"><img src="img/flag_us.png" alt="Icon"></a></li>
