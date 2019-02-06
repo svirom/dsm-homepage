@@ -941,7 +941,6 @@ p {
 
 /*-----------Integrations Section------------------*/
 .integrations_section {
-	/*min-height: calc(100vh - 60px);*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -954,7 +953,7 @@ p {
 	margin: 30px 0;
 	font: 600 18px/1.25 'Raleway', sans-serif;
 	border: 1px solid #E6E6E6;
-	border-bottom-width: 6px;
+	border-bottom-width: 4px;
 	border-radius: 8px;
 	background-color: #ffffff;
 }
@@ -1003,6 +1002,7 @@ p {
 }
 .integrations_table td img {
 	max-width: 120px;
+	max-height: 28px;
 }
 .integrations_table td i.fa-check {
 	color: #008ADD;
@@ -1092,27 +1092,36 @@ a.integrations_plus:hover {
 	margin-right: 0;
 }
 @media (max-width: 1199px) {
-	
+	.integrations_section > .container_inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 @media (max-width: 991px) {
 	
 }
 @media (max-width: 767px) {
+	.integrations_section {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.integrations_section h2 {
 		margin-top: 10px;
 		font-size: 28px;
+	}
+	.integrations_table {
+		margin: 15px 0;
+		font-size: 16px;
 	}
 }
 /*-----------End Integrations Section------------------*/
 
 /*-----------Supported Suppliers Section------------------*/
 .suppliers_section {
-	/*min-height: calc(100vh - 60px);*/
 	padding-top: 40px;
 	padding-bottom: 40px;
-	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 50%),
+	background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%),
                 url(../img/bkgr_map.png) center top no-repeat;
-    /*background-size: 100% auto;*/
     background-size: cover;
 }
 .suppliers_section h2 {
@@ -1121,11 +1130,9 @@ a.integrations_plus:hover {
 	text-align: center;
 }
 .suppliers_section .list_suppliers {
-	/*margin-top: 20px;*/
+	margin-top: 30px;
 	margin-bottom: 60px;	
 	padding: 10px 10px 7px;
-    /*vertical-align: middle;*/
-    /*text-align: center;*/
     border-radius: 43px;
     background-color: #4D4D4D;
 }
@@ -1152,7 +1159,6 @@ a.integrations_plus:hover {
 	margin-right: 1.78em;
 	padding: 3px;
 	border-radius: 50%;
-	/*border: 5px solid rgba(255, 255, 255, 0.4);*/
 	background-color: rgba(255, 255, 255, 0.6)
 }
 .suppliers_section .list_suppliers .nav-pills > li + li {
@@ -1172,7 +1178,7 @@ a.integrations_plus:hover {
 	    -ms-transform: translateX(-50%); 
 	     -o-transform: translateX(-50%); 
 	        transform: translateX(-50%);
-    font: 900 18px 'Raleway', sans-serif;
+    font: 700 18px 'Raleway', sans-serif;
     color: #262626;
     letter-spacing: 1px;
 }
@@ -1205,8 +1211,6 @@ a.integrations_plus:hover {
 .suppliers_section .list_suppliers img {
 	max-width: 60px;
 	padding: 4px;
-	/*max-width: 80px;
-	padding: 8px;*/
 	border-radius: 50%;
     background-color: #ffffff;
     opacity: 0.6;
@@ -1223,33 +1227,11 @@ a.integrations_plus:hover {
 .suppliers_section .list_suppliers li.active::after {
 	color: #30ABF2;
 }
-/*.suppliers_section .list_suppliers .nav-pills > li.active > a, 
-.suppliers_section .list_suppliers .nav-pills > li.active > a:focus, 
-.suppliers_section .list_suppliers .nav-pills > li.active > a:hover {
-    color: #fff;
-    background-color: transparent;
-}*/
-/*.suppliers_section .list_suppliers .nav > li > a:focus, 
-.suppliers_section .list_suppliers .nav > li > a:hover {
-    background-color: transparent;
-}*/
-@media (max-width: 1440px) {
-	/*.suppliers_section .list_suppliers {
-	    margin-top: 10px;
-	}*/
-	/*.suppliers_section .list_suppliers li {
-		border-width: 3px;
-	}*/
-	/*.suppliers_section .list_suppliers img {
-	    max-width: 60px;
-	    padding: 4px;
-	}*/
-	/*.suppliers_section .list_suppliers li::after {
-	    bottom: -34px;
-	    font-size: 22px;
-	}*/
-}
 @media (max-width: 1199px) {
+	.suppliers_section > .container_inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.suppliers_section .list_suppliers {
 		padding-bottom: 10px;
 	}
@@ -1280,6 +1262,10 @@ a.integrations_plus:hover {
 	}
 }
 @media (max-width: 767px) {
+	.suppliers_section {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.suppliers_section h2 {
 		margin-top: 10px;
 		font-size: 28px;
@@ -1289,7 +1275,6 @@ a.integrations_plus:hover {
 		padding: 10px 5px;
 	}
 	.suppliers_section .list_suppliers li {
-		/*border: 3px solid rgba(38, 38, 38, 0.3);*/
 		margin-right: 0;
 	}
 	.suppliers_section .list_suppliers li::after {
@@ -1299,9 +1284,11 @@ a.integrations_plus:hover {
 		max-width: 50px;
 		padding: 2px;
 	}
-	/*.integrations_section .list_integrations li::after {
-		display: none;
-	}*/
+	.integrations_table .table > thead > tr > th:first-child, 
+	.integrations_table .table > tbody > tr > td:first-child, 
+	.integrations_table .table > tfoot > tr > td:first-child {
+		padding-left: 20px;
+	}
 }
 /*-----------End Supported Suppliers Section------------------*/
 
@@ -1410,23 +1397,22 @@ a.integrations_plus:hover {
 /*-----------Features Section--------------------*/
 .features_section {
 	padding-top: 4.7%;
-	padding-bottom: 4.7%;
+	padding-bottom: 80px;
 	background-color: #F7F7F7;
 }
 .features_section .carousel-control {
-	text-shadow: none;
-	opacity: 1.0;
 	width: 40px;
 	top: 0;
 	bottom: auto;
+	text-shadow: none;
+	opacity: 1.0;
 }
 .features_section .carousel-control.left,
 .features_section .carousel-control.right {
-	background: none;
 	right: 0;
     left: auto;
     top: 50%;
-
+    background: none;
 }
 .features_section .carousel-control.left {
 	margin-top: 50px;
@@ -1495,6 +1481,13 @@ a.integrations_plus:hover {
 .item_features {
 	max-width: 532px;
 	padding-right: 25px;
+	padding-bottom: 40px;
+}
+.item_features .features_link {
+	display: inline-block;
+	margin-top: 10px;
+	font: 600 16px 'Raleway', sans-serif;
+    color: #0089D9;
 }
 .features_section p {
 	margin: 0;
@@ -1523,10 +1516,11 @@ a.integrations_plus:hover {
 .features_progress.progress {
     position: relative;
     height: 3px;
+    left: 50%;
+    bottom: -10px;
+    width: 100%;
     max-width: 448px;
-    margin-top: 3em;
-    margin-bottom: 5.75em;
-    margin-right: 2.9em;
+    margin-left: 15px;
     border-radius: 3px;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -1541,6 +1535,7 @@ a.integrations_plus:hover {
 	top: -4px;
 	border-radius: 50%;
 	background-color: #CCCCCC;
+	cursor: pointer;
 }
 .progress_point:nth-of-type(2) {
 	left: 25%;
@@ -1557,10 +1552,12 @@ a.integrations_plus:hover {
 .progress_point.in {
 	background-color: #0089D9;
 }
-.progress_point.active {
+.progress_point.active,
+.progress_point:hover {
 	width: 20px;
 	height: 20px;
 	top: -8px;
+	margin-left: -4px;
 	background-color: #0089D9;
 	background: -moz-radial-gradient(circle at center, #ffffff, #ffffff 6px, #0089D9 7px, #0089D9);
 	background: -o-radial-gradient(circle at center, #ffffff, #ffffff 6px, #0089D9 7px, #0089D9);
@@ -1600,7 +1597,7 @@ a.integrations_plus:hover {
 .features_labels label:nth-of-type(5) {
 	left: 100%;
 }
-.features_labels label.active {
+.features_labels label.current {
 	color: #0089D9;
 }
 @media (max-width: 1440px) {
@@ -1624,12 +1621,25 @@ a.integrations_plus:hover {
 	.features_section h2 {
 		font-size: 32px;
 	}
+	.features_progress.progress {
+		padding-right: 10px;
+	}
+}
+@media (max-width: 991px) {
+	.item_features {
+		padding-bottom: 10px;
+	}
+	.features_progress.progress {
+		width: auto;
+		left: 0;
+		margin: 2em 2.9em 1.5em 1em;
+		padding-right: 0;
+	}
 }
 @media (max-width: 767px) {
 	.features_section .carousel-control.left,
 	.features_section .carousel-control.right {
 	    top: 0;
-
 	}
 	.features_section .carousel-control.left {
 		margin-top: 100px;
@@ -1646,10 +1656,6 @@ a.integrations_plus:hover {
 	}
 	.features_img {
 		padding: 20px 50px 0 0;
-	}
-	.features_progress.progress {
-		margin-top: 2em;
-		margin-left: 1em;
 	}
 }
 /*-----------End Features Section--------------------*/
@@ -1849,6 +1855,17 @@ a.integrations_plus:hover {
 #price-per-list:focus {
     outline: none;
 }
+#price-per-list.free span:not(.free) {
+	display: none;
+}
+.span_listings.free {
+	display: inline-block;
+	padding: 7px 0;
+	font-size: 22px;
+}
+#price-per-list:not(.free) span.free {
+	display: none;
+}
 .features {
 	border-top: none;
 	text-align: left;
@@ -2015,7 +2032,7 @@ a.integrations_plus:hover {
 }
 .reviews_section .carousel_wrapper {
 	padding: 30px;
-	border-bottom: 4px solid #E6E6E6;
+	border-bottom: 3px solid #E6E6E6;
 	border-radius: 8px;
 	background-color: #ffffff;
 }
@@ -2066,7 +2083,7 @@ a.integrations_plus:hover {
     position: relative;
     width: 40%;
     max-width: 370px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 .reviews_section .videoWrapper {
     position: relative;
@@ -2091,12 +2108,12 @@ a.integrations_plus:hover {
     background: rgba(0, 0, 0, 0.8);
 }
 .buttonWrapper button {
+	position: absolute;
+	top: 50%;
+    left: 50%;
 	padding: 0;
 	border: 0;
 	border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%,-50%); 
 	   -moz-transform: translate(-50%,-50%); 
 	    -ms-transform: translate(-50%,-50%); 
