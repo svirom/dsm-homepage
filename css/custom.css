@@ -1497,10 +1497,8 @@ a.integrations_plus:hover {
 	padding-bottom: 40px;
 }
 .item_features .features_link {
-	/*display: inline-block;*/
 	margin-top: 16px;
 	font: 600 20px 'Raleway', sans-serif;
-    color: #0089D9;
 }
 .item_features .features_link a {
 	color: #0089D9;
