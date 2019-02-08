@@ -994,6 +994,7 @@ p {
 .integrations_table .table > tbody > tr > td {
 	position: relative;
 	border-top: 0;
+	font-size: 16px;
 	vertical-align: middle;
 }
 .integrations_table .table > tbody > tr > td:last-of-type {
@@ -1156,7 +1157,7 @@ a.integrations_plus:hover {
 }
 .suppliers_section .list_suppliers > p {
 	float: left;
-	max-width: 360px;
+	max-width: 330px;
 	margin: 0;
 	padding-left: 32px;
 	font-size: 24px;
@@ -1249,7 +1250,8 @@ a.integrations_plus:hover {
 		padding-bottom: 10px;
 	}
 	.suppliers_section .list_suppliers > p {
-		max-width: 320px;
+		max-width: 275px;
+		padding-left: 20px;
 		font-size: 20px;
 	}
 	.suppliers_section .list_suppliers li {
@@ -1289,6 +1291,7 @@ a.integrations_plus:hover {
 	}
 	.suppliers_section .list_suppliers li {
 		margin-right: 0;
+		margin-bottom: 5px;
 	}
 	.suppliers_section .list_suppliers li::after {
 		display: none;
