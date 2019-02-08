@@ -344,6 +344,7 @@ $(document).ready(function() {
         'Royal 9k Plan',
         'Custom 10K Plan',
         'Custom 11K Plan',
+        'Custom 12K Plan',
         'Custom 13K Plan',
         'Custom 14K Plan',
         'Custom 15K Plan',
@@ -375,6 +376,7 @@ $(document).ready(function() {
         '269.97',
         '289.97',
         '318.97',
+        '347.97',
         '376.97',
         '405.97',
         '434.97',
@@ -406,6 +408,7 @@ $(document).ready(function() {
         '9000',
         '10000',
         '11000',
+        '12000',
         '13000',
         '14000',
         '15000',
@@ -459,7 +462,8 @@ $(document).ready(function() {
             $("#amount span.values").text(plansItems[value]);
             $( "#price span.values" ).text("$" + plansPrices[value]);
             var perList = Math.ceil(plansPrices[value])/plansItems[value];
-            perList = ((perList * 100) % 1 === 0 ? perList.toFixed(2) : ((perList * 1000) % 1 === 0 ? perList.toFixed(3) : perList.toFixed(4)));
+            // perList = ((perList * 100) % 1 === 0 ? perList.toFixed(2) : ((perList * 1000) % 1 === 0 ? perList.toFixed(3) : perList.toFixed(4)));
+            perList = (perList*100).toFixed(2) + '¢';
             $('#price-per-list span.values').text(perList);
             $('#plan-name').text(plansNames[value]);
 

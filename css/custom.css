@@ -994,7 +994,11 @@ p {
 .integrations_table .table > tbody > tr > td {
 	position: relative;
 	border-top: 0;
+	font-size: 16px;
 	vertical-align: middle;
+}
+.integrations_table .table > tbody > tr > td:last-of-type {
+	white-space: nowrap;
 }
 .integrations_table .table > tfoot > tr > td {
 	border-top: 1px solid #E6E6E6;
@@ -1013,11 +1017,18 @@ p {
 .integrations_table td > a + .tooltip {
 	width: 160px;
 }
+.integrations_table td > a.worldwide_table {
+	font-size: 20px;
+	color: #333333;
+}
+.integrations_table td > a.worldwide_table + .tooltip {
+	width: auto;
+}
 .tooltip_table {
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 14px;
 }
 .notooltip_table {
 	font-size: 16px;
@@ -1029,7 +1040,7 @@ p {
 	visibility: hidden;
   	position: absolute;
   	bottom: 90%;
-  	left: -30px;
+  	left: 20px;
   	padding: 3px 5px 5px;
   	border-radius: 29px;
   	z-index: 1;
@@ -1038,6 +1049,9 @@ p {
   	-webkit-transition: all 0.6s ease;
   	   -moz-transition: all 0.6s ease;
   	        transition: all 0.6s ease;
+}
+.suppliers_section .tooltip_table + span {
+	left: 30px;
 }
 .tooltip_table + span img {
 	width: 24px;
@@ -1143,7 +1157,7 @@ a.integrations_plus:hover {
 }
 .suppliers_section .list_suppliers > p {
 	float: left;
-	max-width: 360px;
+	max-width: 330px;
 	margin: 0;
 	padding-left: 32px;
 	font-size: 24px;
@@ -1236,7 +1250,8 @@ a.integrations_plus:hover {
 		padding-bottom: 10px;
 	}
 	.suppliers_section .list_suppliers > p {
-		max-width: 320px;
+		max-width: 275px;
+		padding-left: 20px;
 		font-size: 20px;
 	}
 	.suppliers_section .list_suppliers li {
@@ -1276,6 +1291,7 @@ a.integrations_plus:hover {
 	}
 	.suppliers_section .list_suppliers li {
 		margin-right: 0;
+		margin-bottom: 5px;
 	}
 	.suppliers_section .list_suppliers li::after {
 		display: none;
@@ -1484,10 +1500,11 @@ a.integrations_plus:hover {
 	padding-bottom: 40px;
 }
 .item_features .features_link {
-	display: inline-block;
-	margin-top: 10px;
-	font: 600 16px 'Raleway', sans-serif;
-    color: #0089D9;
+	margin-top: 16px;
+	font: 600 20px 'Raleway', sans-serif;
+}
+.item_features .features_link a {
+	color: #0089D9;
 }
 .features_section p {
 	margin: 0;
@@ -1656,6 +1673,9 @@ a.integrations_plus:hover {
 	}
 	.features_img {
 		padding: 20px 50px 0 0;
+	}
+	.item_features .features_link {
+		font-size: 16px;
 	}
 }
 /*-----------End Features Section--------------------*/
